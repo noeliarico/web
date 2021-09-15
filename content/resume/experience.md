@@ -7,9 +7,9 @@ widget: experience
 headless: true
 
 # Order that this section appears on the page.
-weight: 40
+weight: 1
 
-title: Experience
+title: Subjects
 subtitle:
 
 # Date format for experience
@@ -30,7 +30,7 @@ experience:
     date_start: '2021-01-01'
     date_end: ''
     description: |2-
-        Responsibilities include:
+        **Responsibilities include**:
         
         * Analysing
         * Modelling
@@ -45,6 +45,14 @@ experience:
     date_end: '2020-12-31'
     description: Taught electronic engineering and researched semiconductor physics.
 
+  - title: 2021/2022
+    company: University of Oviedo
+    date_start: '2021-01-01'
+    description: |2-
+    
+      ###### Degree in Software Engineering:
+        * Artificial Intelligence (60h)
+    
 design:
   columns: '2'
 ---

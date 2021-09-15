@@ -21,26 +21,33 @@ organizations:
   url: https://www.uniovi.es
 role: PhD student
 social:
-- icon: envelope
-  icon_pack: fas
-  link: /#contact
 - display:
     header: true
   icon: twitter
   icon_pack: fab
   label: Follow me on Twitter
   link: https://twitter.com/noeliarico_
-- icon: graduation-cap
+- icon: envelope
   icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: /#contact
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: http://github.com/noeliarico/
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/in/noeliaricop/
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.es/citations?user=T4AbY4IAAAAJ
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0002-6169-4523
+- icon: researchgate
+  icon_pack: ai
+  link: https://www.researchgate.net/profile/Noelia-Rico
 superuser: true
 title: Noelia Rico
+
 ---
 
 <!--Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
