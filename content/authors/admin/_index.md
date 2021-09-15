@@ -1,19 +1,20 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
+bio: Currently studying a PhD in Computer Science at the University of Oviedo
   matter.
 education:
   courses:
   - course: MSc in Research in Artificial Intelligence
     institution: International University Menéndez Pelayo
-    year: 2019
+    year: 2018
   - course: BEng in Software Engineering
     institution: University of Oviedo
-    year: 2018
+    year: 2017
 email: "noeliarico@uniovi.es"
 highlight_name: false
 interests:
 - Computational social choice
 - Parallel computing on GPU
+- Clustering algorithms
 organizations:
 - name: Department of Computer Science
   url: https://www.uniovi.es/en/departamentos/di
