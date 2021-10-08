@@ -1,5 +1,5 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+# Documentation: https://wowchemy.com/docs/managing-content/
 
 title: Intelligent decision support to determine the best sensory guardrail locations
 subtitle: ''
@@ -12,7 +12,7 @@ authors:
 tags: []
 categories: []
 date: '2019-01-01'
-lastmod: 2021-07-02T13:03:57+02:00
+lastmod: 2021-09-21T14:46:48+02:00
 featured: false
 draft: false
 
@@ -30,7 +30,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2021-07-02T11:03:57.139575Z'
+publishDate: '2021-09-21T12:46:48.542698Z'
 publication_types:
 - '2'
 abstract: ''

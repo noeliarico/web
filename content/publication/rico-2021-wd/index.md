@@ -1,5 +1,5 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+# Documentation: https://wowchemy.com/docs/managing-content/
 
 title: Reducing the computational time for the Kemeny method by exploiting Condorcet
   properties
@@ -7,13 +7,13 @@ subtitle: ''
 summary: ''
 authors:
 - Noelia Rico
-- Camino R Vela
+- Camino R. Vela
 - Raúl Pérez-Fernández
-- Irene Dı́az
+- Irene Díaz
 tags: []
 categories: []
 date: '2021-01-01'
-lastmod: 2021-07-02T13:03:55+02:00
+lastmod: 2021-09-21T14:46:48+02:00
 featured: false
 draft: false
 
@@ -31,7 +31,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2021-07-02T11:03:55.376127Z'
+publishDate: '2021-09-21T12:46:48.163018Z'
 publication_types:
 - '2'
 abstract: ''

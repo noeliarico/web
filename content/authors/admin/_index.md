@@ -15,6 +15,9 @@ interests:
 - Computational social choice
 - Parallel computing on GPU
 - Clustering algorithms
+- Data visualization
+- Teaching R for social sciences
+
 organizations:
 - name: Department of Computer Science
   url: https://www.uniovi.es/en/departamentos/di

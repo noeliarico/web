@@ -1,19 +1,18 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+# Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Reinforcement of python learning through a programming gymkhana
+title: The Borda count as an initial threshold for Kemeny ranking aggregation
 subtitle: ''
 summary: ''
 authors:
-- B Remeseiro
-- A J Dı́az Honrubia
-- G Cebrián Márquez
-- N Rico
-- J R Villar
+- Noelia Rico
+- Camino R. Vela
+- Ral Prez-Fernndez
+- Irene Díaz
 tags: []
 categories: []
-date: '2019-01-01'
-lastmod: 2021-07-02T12:52:33+02:00
+date: '2021-01-01'
+lastmod: 2021-09-21T14:46:48+02:00
 featured: false
 draft: false
 
@@ -31,10 +30,12 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2021-07-02T10:52:33.434676Z'
+publishDate: '2021-09-21T12:46:47.980793Z'
 publication_types:
 - '1'
 abstract: ''
-publication: '*EDULEARN19 Proceedings 11th International Conference on Education and
-  New Learning Technologies: Palma, Spain. 1-3 July, 2019*'
+publication: '*Joint Proceedings of the 19th World Congress of the International Fuzzy
+  Systems Association (IFSA), the 12th Conference of the European Society for Fuzzy
+  Logic and Technology (EUSFLAT), and the 11th International Summer School on Aggregation
+  Operators (AGOP)*'
 ---

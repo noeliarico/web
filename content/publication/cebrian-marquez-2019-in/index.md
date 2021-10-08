@@ -1,5 +1,5 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+# Documentation: https://wowchemy.com/docs/managing-content/
 
 title: 'Finext 2019: Looking on the bright side by uncovering the weaknesses'
 subtitle: ''
@@ -16,7 +16,7 @@ authors:
 tags: []
 categories: []
 date: '2019-01-01'
-lastmod: 2021-07-02T13:03:56+02:00
+lastmod: 2021-09-21T14:46:48+02:00
 featured: false
 draft: false
 
@@ -34,7 +34,7 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2021-07-02T11:03:56.410747Z'
+publishDate: '2021-09-21T12:46:48.697036Z'
 publication_types:
 - '1'
 abstract: ''
