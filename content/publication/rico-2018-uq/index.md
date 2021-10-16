@@ -6,7 +6,7 @@ subtitle: ''
 summary: ''
 authors:
 - Noelia Rico
-- Irene Dı́az
+- Irene Díaz
 tags: []
 categories: []
 date: '2018-01-01'
