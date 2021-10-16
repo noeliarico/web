@@ -7,10 +7,10 @@ summary: ''
 authors:
 - Noelia Rico
 - Pedro Alonso
-- Laura Muñiz-Rodrı́guez
+- Laura Muñiz-Rodríguez
 - Raúl Pérez-Fernández
-- Luis J Rodr\ǵuez-Muñiz
-- Irene D\'ź
+- Luis J Rodríguez-Muñiz
+- Irene Díaz
 tags: []
 categories: []
 date: '2020-01-01'

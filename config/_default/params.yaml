@@ -7,7 +7,7 @@
 
 theme: noelia
 day_night: true
-font: ''
+font: 'rose'
 font_size: L
 
 # SEO
@@ -32,7 +32,7 @@ address:
 coordinates:
   latitude: '43.35890189155793'
   longitude: '-5.854432785386466'
-directions: Enter departamental building and take the stairs to Office 3.22 on Floor 2
+directions: Enter departamental building and take the stairs to Office 3.22 on the 3rd floor
 contact_links:
   - icon: twitter
     icon_pack: fab

@@ -7,8 +7,9 @@ summary: ''
 authors:
 - Noelia Rico
 - Camino R. Vela
-- Ral Prez-Fernndez
+- Raúl Pérez-Fernández
 - Irene Díaz
+
 tags: []
 categories: []
 date: '2021-01-01'

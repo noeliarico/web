@@ -7,8 +7,8 @@ summary: ''
 authors:
 - G Cebrián-Márquez
 - E A de la Cal
-- A J Dı́az-Honrubia
-- R Menc\á
+- A J Díaz-Honrubia
+- R Mencía
 - B Remeseiro
 - N Rico
 - P Suárez-Otero
