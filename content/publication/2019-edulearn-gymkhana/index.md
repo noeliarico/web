@@ -6,8 +6,8 @@ subtitle: ''
 summary: ''
 authors:
 - B Remeseiro
-- A J Dı́az Honrubia
-- G Cebrián Márquez
+- A J Díaz-Honrubia
+- G Cebrián-Márquez
 - N Rico
 - J R Villar
 tags: []

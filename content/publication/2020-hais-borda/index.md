@@ -8,7 +8,7 @@ summary: ''
 authors:
 - Noelia Rico
 - Raúl Pérez-Fernández
-- Irene Dı́az
+- Irene Díaz
 tags: []
 categories: []
 date: '2020-01-01'

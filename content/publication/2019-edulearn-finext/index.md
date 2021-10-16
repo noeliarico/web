@@ -5,10 +5,10 @@ title: 'Finext 2019: Looking on the bright side by uncovering the weaknesses'
 subtitle: ''
 summary: ''
 authors:
-- G Cebrián Márquez
+- G Cebrián-Márquez
 - E de Andrés
 - E de la Cal
-- R Mencı́a
+- R Mencía
 - B Remeseiro
 - N Rico
 - J R Villar

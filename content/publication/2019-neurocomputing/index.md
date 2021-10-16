@@ -6,7 +6,7 @@ subtitle: ''
 summary: ''
 authors:
 - Noelia Rico
-- Irene Dı́az
+- Irene Díaz
 - José R Villar
 - Enrique de la Cal
 tags: []

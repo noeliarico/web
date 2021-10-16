@@ -6,8 +6,8 @@ subtitle: ''
 summary: ''
 authors:
 - Noelia Rico
-- Raul Perez-Fernandez
-- Irene Diaz
+- Raúl Pérez-Fernández
+- Irene Díaz
 tags: []
 categories: []
 date: '2019-01-01'
