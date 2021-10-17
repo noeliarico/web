@@ -1,21 +1,22 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: An efficient computation of Dempster-Shafer theory of evidence based on native
-  GPU implementation
+title: On the identification of chronodisruption-based biomarkers to estimate pregnancy
+  attempt time
 subtitle: ''
 summary: ''
 authors:
+- Ana G Rua
 - Noelia Rico
-- Luigi Troiano
-- Irene Díaz
+- Ana Alonso
+- Elena Diaz
+- Irene Diaz
 tags: []
 categories: []
 date: '2021-01-01'
 lastmod: 2021-10-17T11:09:34+02:00
 featured: false
 draft: false
-url_slides: 'slides/belief/slides.html'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -31,9 +32,10 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2021-10-17T09:09:34.397280Z'
+publishDate: '2021-10-17T09:09:34.130137Z'
 publication_types:
-- '6'
+- '1'
 abstract: ''
-publication: '*Belief Functions: Theory and Applications*'
+publication: '*2021 IEEE 34th International Symposium on Computer-Based Medical Systems
+  (CBMS)*'
 ---
