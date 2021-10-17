@@ -16,6 +16,7 @@ date: '2021-01-01'
 lastmod: 2021-09-21T14:46:48+02:00
 featured: false
 draft: false
+slides: example
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
