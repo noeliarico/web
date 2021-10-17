@@ -75,7 +75,7 @@ is a measure of *conflict* between the two basic probability assignment sets. In
 <br/>
 
 | Link           | Language     | Author                       | Comments                                                                                |
-|----------------|--------------|------------------------------|-----------------------------------------------------------------------------------------|
+|---------------:|:------------:|:-----------------------------|-----------------------------------------------------------------------------------------|
 | TBM            | MATLAB       | Philippe Smets               | TBM, FMT                                                                                |
 | Software       | R and MATLAB | Thierry Denœux               | Clustering, Distance-based Classification, Approximation                                |
 | iBelief        | R            | Kuang Zhou and Arnaud Martin | Some basic functions to implement belief functions.                                     |
@@ -84,7 +84,7 @@ is a measure of *conflict* between the two basic probability assignment sets. In
 
 <br/>
 
-Software available in the according to [https://bfasociety.org](https://bfasociety.org)].
+Software available according to [https://bfasociety.org](https://bfasociety.org).
 
 ---
 
@@ -119,7 +119,7 @@ knitr::include_graphics("imgs/be_pl_parallel.jpg")
 
 # Execution time
 
-Three different algorithms:
+Three different implementations:
 
 - Executed on the CPU
   - `AlgIPy`
@@ -127,7 +127,7 @@ Three different algorithms:
 - Executed on the GPU
   - `AlgGPU`
   
-  <br/><br/>
+<br/>
   
 Execution times obtained with each of the algorithms:
 
