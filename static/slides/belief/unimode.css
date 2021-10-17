@@ -1,6 +1,6 @@
 .remark-slide-content {
   background-color: #FAFAFA;
-  border-top: 80px solid #FABADA;
+  border-top: 80px solid #EBE9FD;
   font-size: 20px;
   font-weight: 300;
   line-height: 1.5;
@@ -12,7 +12,7 @@
 }
 
 .inverse {
-  background-color: #FABADA;
+  background-color: #EBE9FD;
   text-shadow: none;
 }
 
@@ -25,7 +25,7 @@ h1 {
   font-weight: normal;
   margin-top: -95px;
   margin-left: -00px;
-  color: #FAFAFA;
+  color: #26176B;
 }
 
 h2, h3, h4 {
@@ -65,7 +65,7 @@ h2, h3, h4 {
 }
 
 .title-slide h1  {
-  color: #1A292C;
+  color: #26176B;
   font-size: 40px;
   text-shadow: none;
   font-weight: 400;
@@ -97,8 +97,8 @@ hr, .title-slide h2::after, .mline h1::after {
   content: '';
   display: block;
   border: none;
-  background-color: #EB811B;
-  color: #EB811B;
+  background-color: #EBE9FD;
+  color: #EBE9FD;
   height: 1px;
 }
 

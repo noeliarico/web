@@ -14,9 +14,9 @@
 class: center, middle, inverse, title-slide
 
 # An efficient computation of Dempster-Shafer theory of evidence based on native GPU implementation 💻
-## <br/>with xaringan
+## <b>BELIEF 2021</b> 6th International Conference on Belief Functions, October 15-17, 2021, Shanghai, China.
 ### <b>Noelia Rico</b><sup>1</sup>, Luigi Troiano<sup>2</sup>, Irene Díaz<sup>1</sup>
-### <br/> <sup>1</sup>Department of Computer Science, University of Oviedo, Spain <br/> <sup>2</sup>University of Salerno, Italy
+### <br/> <sup>1</sup>Department of Computer Science, University of Oviedo, Spain <br/> <sup>2</sup>Department of Scienze Aziendali - Management &amp; Innovation Systems, University of Salerno, Italy
 
 ---
 
@@ -62,7 +62,7 @@ top:1em;right:1em;
 }
 .xe__progress-bar {
   height: 0.25em;
-  background-color: purple;
+  background-color: #1A292C;
   width: calc(var(--slide-current) / var(--slide-total) * 100%);
 }
 .remark-visible .xe__progress-bar {
@@ -79,34 +79,48 @@ top:1em;right:1em;
 
 
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+# Index
 
-???
-
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
-
----
-
+- Software for Dempster-Shafer theory of evidence
+- Advantages of GPU computations
+- Efficient execution
 
 ---
 
-# Basic functions: Belief and Plausibility
+# Basic functions I
+
+&lt;/br&gt;
+
+## Belief
 
 `$$Bel(A)=\sum_{S\subseteq A} m(S)$$`
+
+&lt;/br&gt;
+
+## Plausibility
 
 `$$Pl(A)=\sum_{S \cap A \neq \emptyset} m(S)$$`
 
 ---
 
-# Basic funtions: combination
+# Basic functions II
 
----
+&lt;/br&gt;
 
-# Algorithm
+## Dempster's combination rule
+
+`$$m_{1,2}(A) = \frac{1}{1-Z} \sum\limits_{B \cap C = A} m_1(B) \cdot m_2(C)$$`
+where
+
+`$$Z = \sum\limits_{B \cap C = \emptyset} m_1(B) \cdot m_2(C)$$`
+
+is a measure of *conflict* between the two basic probability assignment sets. In addition, `\(m_{1,2}(\emptyset) = 0\)` by definition.
 
 ---
 
 # Available software
+
+&lt;br/&gt;
 
 | Link           | Language     | Author                       | Comments                                                                                |
 |----------------|--------------|------------------------------|-----------------------------------------------------------------------------------------|
@@ -116,7 +130,9 @@ Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharin
 | Belief Package | R            | Sébastien Destercke          | Some basic functions to deal with discrete belief functions.                            |
 | pyds           | Python       | Thomas Reineking             | A Python library for performing calculations in the Dempster-Shafer theory of evidence. |
 
-.footnote[[1] [https://bfasociety.org](https://bfasociety.org)]
+&lt;br/&gt;
+
+Software available in the according to [https://bfasociety.org](https://bfasociety.org)].
 
 ---
 
@@ -126,28 +142,102 @@ Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharin
 
 ## Why Python?
 
-- Google Collab
+- Numba package for CUDA
+- Google Colab [https://colab.research.google.com](https://colab.research.google.com)
+
+![algorithm](imgs/colab.png)
+
+---
+
+# Algorithm
+
+![algorithm](imgs/algorithm.png)
+
+---
+
+# Parallel approach
+
+.center[
+&lt;img src="imgs/be_pl_parallel.jpg" width="70%" /&gt;
+]
 
 ---
 
 # Execution time
 
+Three different algorithms:
+
+- Executed on the CPU
+  - `AlgIPy`
+  - `AlgCPy`
+- Executed on the GPU
+  - `AlgGPU`
+  
+  &lt;br/&gt;&lt;br/&gt;
+  
+Execution times obtained with each of the algorithms:
+
+&lt;img src="imgs/tiempos.png" width="100%" /&gt;
+
 ---
 
-# Usage
+# Comparison of the execution time
+
+&lt;br/&gt;
+
+Comparison of the execution time with the existing Python package `pyds`
+
+&lt;br/&gt;
+
+&lt;img src="imgs/comparison.png" width="100%" /&gt;
 
 ---
 
-# Noelia
+# Execution time combination rule
 
-piece of code in python
+
+- Each thread evaluates, in parallel, one of the different pairs of focal elements `\(\{(B,C)\,|\,B \in F_{m_1}(\Omega) \land C \in F_{m_2}(\Omega)\}\)`, computing its intersection as well as the corresponding result obtained from `\(m_1(B) \cdot m_2(C)\)`.
+- Then, one single thread goes sequentially over all the obtained intersections, grouping the ones that represent the same focal element in order to create the resulting focal set `\(F_3(\Omega)\)` and the corresponding basic probabilities assignment of the focal elements.
+- The threads are again used to divide in parallel the summed masses obtained for all `\(A \in F_3(\Omega)\)` by `\(1-Z\)`.
+
+.left[
+&lt;img src="imgs/combination_times.jpg" width="20%" /&gt;
+]
+
+
+---
+
+# Package 📦
 
 
 ```python
-import numpy as np
-import math
-a = x + c
-math.abs(a)
+# Create a Frame of Discernment for the items a, b, c, d using a list
+fod1 = ds.FrameOfDiscernment(['a', 'b', 'c', 'd'])
+```
+
+
+```python
+# Create focal set for the frame of discernment
+fs1 = ds.FocalSet(fod1, 
+    {
+        "abc": 0.4,
+        "abdc": 0.3,
+        "a": 0.3
+    })
+```
+
+
+```python
+# Create lattice
+lat = ds.Lattice(fod1, fs1)
+```
+
+
+```python
+# Compute the plausibility
+lat.pl()
+# Compute the belief
+lat.bel()
 ```
 
 ---
@@ -155,11 +245,13 @@ class: inverse, center, middle
 
 # 📨 noeliarico@uniovi.es
 
-## Thank you very much for your attention!
+**Thank you very much for your attention!**
 
 What would you like to see in our package?
 
----
+&lt;img src="imgs/qr.png" width="30%" /&gt;
+
+🌐 www.noeliarico.dev
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

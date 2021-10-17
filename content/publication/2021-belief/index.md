@@ -1,13 +1,12 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: The Borda count as an initial threshold for Kemeny ranking aggregation
+title: An Efficient Computation of Dempster-Shafer Theory of Evidence Based on Native GPU Implementation
 subtitle: ''
 summary: ''
 authors:
 - Noelia Rico
-- Camino R. Vela
-- Raúl Pérez-Fernández
+- Luigi Troiano
 - Irene Díaz
 
 tags: []
@@ -16,6 +15,7 @@ date: '2021-01-01'
 lastmod: 2021-09-21T14:46:48+02:00
 featured: false
 draft: false
+url_slides: 'slides/belief/slides.html'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -35,8 +35,5 @@ publishDate: '2021-09-21T12:46:47.980793Z'
 publication_types:
 - '1'
 abstract: ''
-publication: '*Joint Proceedings of the 19th World Congress of the International Fuzzy
-  Systems Association (IFSA), the 12th Conference of the European Society for Fuzzy
-  Logic and Technology (EUSFLAT), and the 11th International Summer School on Aggregation
-  Operators (AGOP)*'
+publication: '*Belief Functions: Theory and Applications. BELIEF 2021. Lecture Notes in Computer Science, vol 12915. Springer*'
 ---
