@@ -1,0 +1,114 @@
+---
+title: "An efficient computation of Dempster-Shafer theory of evidence based on native GPU implementation 💻"
+subtitle: "<br/>with xaringan"
+author: "<b>Noelia Rico</b><sup>1</sup>, Luigi Troiano<sup>2</sup>, Irene Díaz<sup>1</sup>"
+institute: "<br/> <sup>1</sup>Department of Computer Science, University of Oviedo, Spain <br/> <sup>2</sup>University of Salerno, Italy"
+email: "otra cosa"
+output:
+  xaringan::moon_reader:
+    css: ["unimode.css", "fonts-unimode.css"]
+   
+---
+
+```{r xaringanExtra, echo = FALSE}
+# meter en css para una apariencia mas latex
+ #nature:
+      #slideNumberFormat: "%current%/%total%"
+xaringanExtra::use_logo("logo.png")
+xaringanExtra::use_progress_bar(color = "purple", location = "bottom")
+```
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+# library(xaringanthemer)
+# style_duo_accent(
+#   primary_color = "#EBE9FD",
+#   secondary_color = "#FF961C",
+#   inverse_header_color = "#FFFFFF"
+# )
+```
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+
+
+---
+
+# Basic functions: Belief and Plausibility
+
+$$Bel(A)=\sum_{S\subseteq A} m(S)$$
+
+$$Pl(A)=\sum_{S \cap A \neq \emptyset} m(S)$$
+
+---
+
+# Basic funtions: combination
+
+---
+
+# Algorithm
+
+---
+
+# Available software
+
+| Link           | Language     | Author                       | Comments                                                                                |
+|----------------|--------------|------------------------------|-----------------------------------------------------------------------------------------|
+| TBM            | MATLAB       | Philippe Smets               | TBM, FMT                                                                                |
+| Software       | R and MATLAB | Thierry Denœux               | Clustering, Distance-based Classification, Approximation                                |
+| iBelief        | R            | Kuang Zhou and Arnaud Martin | Some basic functions to implement belief functions.                                     |
+| Belief Package | R            | Sébastien Destercke          | Some basic functions to deal with discrete belief functions.                            |
+| pyds           | Python       | Thomas Reineking             | A Python library for performing calculations in the Dempster-Shafer theory of evidence. |
+
+.footnote[[1] [https://bfasociety.org](https://bfasociety.org)]
+
+---
+
+# New software based on GPU
+
+- Compute the functions in parallel
+
+## Why Python?
+
+- Google Collab
+
+---
+
+# Execution time
+
+---
+
+# Usage
+
+---
+
+# Noelia
+
+piece of code in python
+
+```{python eval=FALSE, include=TRUE}
+import numpy as np
+import math
+a = x + c
+math.abs(a)
+```
+
+---
+class: inverse, center, middle
+
+# 📨 noeliarico@uniovi.es
+
+## Thank you very much for your attention!
+
+What would you like to see in our package?
+
+---
