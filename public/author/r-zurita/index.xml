@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Zurita | Noelia Rico</title>
+    <link>https://noeliarico.dev/author/r-zurita/</link>
+      <atom:link href="https://noeliarico.dev/author/r-zurita/index.xml" rel="self" type="application/rss+xml" />
+    <description>R Zurita</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 Noelia Rico</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://noeliarico.dev/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>R Zurita</title>
+      <link>https://noeliarico.dev/author/r-zurita/</link>
+    </image>
+    
+    <item>
+      <title>Finext 2020: Designing innovative actions based on past experiences and projects</title>
+      <link>https://noeliarico.dev/publication/2020-edulearn-finext/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2020-edulearn-finext/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Finext 2019: Looking on the bright side by uncovering the weaknesses</title>
+      <link>https://noeliarico.dev/publication/2019-edulearn-finext/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2019-edulearn-finext/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

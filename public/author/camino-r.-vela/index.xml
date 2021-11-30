@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Camino R. Vela | Noelia Rico</title>
+    <link>https://noeliarico.dev/author/camino-r.-vela/</link>
+      <atom:link href="https://noeliarico.dev/author/camino-r.-vela/index.xml" rel="self" type="application/rss+xml" />
+    <description>Camino R. Vela</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 Noelia Rico</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://noeliarico.dev/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Camino R. Vela</title>
+      <link>https://noeliarico.dev/author/camino-r.-vela/</link>
+    </image>
+    
+    <item>
+      <title>Reducing the computational time for the Kemeny method by exploiting Condorcet properties</title>
+      <link>https://noeliarico.dev/publication/2021-caepia/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2021-caepia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Borda count as an initial threshold for Kemeny ranking aggregation</title>
+      <link>https://noeliarico.dev/publication/2021-eusflat/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2021-eusflat/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

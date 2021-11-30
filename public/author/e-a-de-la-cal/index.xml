@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>E A de la Cal | Noelia Rico</title>
+    <link>https://noeliarico.dev/author/e-a-de-la-cal/</link>
+      <atom:link href="https://noeliarico.dev/author/e-a-de-la-cal/index.xml" rel="self" type="application/rss+xml" />
+    <description>E A de la Cal</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 Noelia Rico</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://noeliarico.dev/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>E A de la Cal</title>
+      <link>https://noeliarico.dev/author/e-a-de-la-cal/</link>
+    </image>
+    
+    <item>
+      <title>Finext 2020: Designing innovative actions based on past experiences and projects</title>
+      <link>https://noeliarico.dev/publication/2020-edulearn-finext/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2020-edulearn-finext/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the improvement of a programming Gymkhana for Python self-learning</title>
+      <link>https://noeliarico.dev/publication/2020-edulearn-gymkhana/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2020-edulearn-gymkhana/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6 | Noelia Rico</title>
+    <link>https://noeliarico.dev/publication-type/6/</link>
+      <atom:link href="https://noeliarico.dev/publication-type/6/index.xml" rel="self" type="application/rss+xml" />
+    <description>6</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 Noelia Rico</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://noeliarico.dev/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>6</title>
+      <link>https://noeliarico.dev/publication-type/6/</link>
+    </image>
+    
+    <item>
+      <title>An efficient computation of Dempster-Shafer theory of evidence based on native GPU implementation</title>
+      <link>https://noeliarico.dev/publication/2021-belief/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2021-belief/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the identification of critical questions in the PISA for schools program</title>
+      <link>https://noeliarico.dev/publication/2020-hais-pisa/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2020-hais-pisa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Borda count as a tool for reducing the influence of the distance function on kmeans</title>
+      <link>https://noeliarico.dev/publication/2020-hais-borda/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2020-hais-borda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chord progressions selection based on song audio features</title>
+      <link>https://noeliarico.dev/publication/2018-hais/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2018-hais/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 | Noelia Rico</title>
+    <link>https://noeliarico.dev/publication-type/2/</link>
+      <atom:link href="https://noeliarico.dev/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <description>2</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 Noelia Rico</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://noeliarico.dev/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>2</title>
+      <link>https://noeliarico.dev/publication-type/2/</link>
+    </image>
+    
+    <item>
+      <title>Reducing the computational time for the Kemeny method by exploiting Condorcet properties</title>
+      <link>https://noeliarico.dev/publication/2021-caepia/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2021-caepia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intelligent decision support to determine the best sensory guardrail locations</title>
+      <link>https://noeliarico.dev/publication/2019-neurocomputing/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://noeliarico.dev/publication/2019-neurocomputing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
