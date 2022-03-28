@@ -6,7 +6,7 @@ widget: pages
 # This file represents a page section.
 headless: true
 
-active: false
+active: true
 
 # Order that this section appears on the page.
 weight: 60
@@ -41,3 +41,11 @@ design:
   #   4 = Citation (publication only)
   view: 2
 ---
+
+IT is necessary to register the output of `stdout`. Otherwise it's impossible to write any different thread from the beggining.
+
+```
+a += 3
+print(a)
+```
+
