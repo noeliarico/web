@@ -1,9 +1,9 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: IJAR
+title: FGCS (under review)
 subtitle: 'Check the link for the expriments https://colab.research.google.com/drive/1W2WzlKEg3f2mOlNRgw-xRW4WYuErF3jM?usp=sharing}{https://colab.research.google.com/drive/1W2WzlKEg3f2mOlNRgw-xRW4WYuErF3jM?usp=sharing'
-summary: 'una descripcion'
+summary: 'Experiments'
 authors:
 - Noelia Rico
 - Luigi Troiano
