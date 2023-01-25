@@ -1,0 +1,21 @@
+# Theme metadata
+name = "noelia3"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "rgb(167,190,169)"
+
+# Menu
+menu_primary = "rgb(167,190,169)"
+menu_text = "rgb(0,0,0)"
+menu_text_active = "rgb(217,227,218)"
+menu_title = "rgb(0,0,0)"
+
+# Backgrounds
+background = "rgb(255, 255, 255)"
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(245, 245, 245)"
+
+font = "rose"
