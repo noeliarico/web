@@ -1,8 +1,11 @@
 ---
-bio: Currently studying a PhD in Computer Science at the University of Oviedo
+bio: PhD in Artificial Intelligence at the University of Oviedo
   matter.
 education:
   courses:
+  - course: PhD in Artificial Intelligence
+    institution: University of Oviedo
+    year: 2022
   - course: MSc in Research in Artificial Intelligence
     institution: International University Menéndez Pelayo
     year: 2018
@@ -23,7 +26,7 @@ organizations:
   url: https://www.uniovi.es/en/departamentos/di
 - name: University of Oviedo
   url: https://www.uniovi.es
-role: PhD student
+role: PhD in Artificial Intelligence
 social:
 - display:
     header: true
