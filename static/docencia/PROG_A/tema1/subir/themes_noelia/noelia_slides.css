@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'dmserifdisplay';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url("fonts/DMSerifDisplay.woff2") format('woff2'), 
+       url("fonts/DMSerifDisplay.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'crimson';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url("fonts/CrimsonPro.woff2") format('woff2'), 
+       url("fonts/CrimsonPro.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'overpass';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url("fonts/Overpass-ExtraLight.woff2") format('woff2'), 
+       url("fonts/Overpass-ExtraLight.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'overpass';
+  font-style: normal;
+  font-weight: 700; /* Bold weight */
+  src: local(''),
+       url("fonts/Overpass-Bold.woff2") format('woff2'), 
+       url("fonts/Overpass-Bold.woff") format('woff');
+}
+
+.reveal .cell-output {
+  margin-bottom: 30px; /* Adjust the value to control the space after cell output. */
+}
+
+.peque {
+  font-size: 60%; /* Adjust the size as needed */
+}
+
+.grande {
+  font-size: 180%; /* Adjust the size as needed */
+}
+
+ul li{
+  font-size:1em;
+}
+
+.lenguaje {
+  font-family: monospace;
+}
+
+.reveal h1.ejercicios,
+.reveal h2.ejercicios,
+.reveal h3.ejercicios,
+.reveal h4.ejercicios,
+.reveal h5.ejercicios,
+.reveal h6.ejercicios {
+    font-size: 1.25em;
+    font-weight: bold;
+    background-color: #e8e8e8;
+    color: #008578;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    /* Add any other styling properties you need */
+}
+
+.reveal h1{
+  text-align: center;
+  color: black;
+}
+
+.reveal h2{
+  text-align: left;
+  color: black;
+  margin-top: 0;
+}
+
+.reveal h3{
+  text-align: left;
+  color: black;
+}
+
+/* Custom CSS for reveal.js header with current section and subsection */
+.reveal .slides section .content h1,
+.reveal .slides section .content h2 {
+    display: none;
+}
+
+.reveal .slides section .content.active h1,
+.reveal .slides section .content.active h2 {
+    display: block;
+}
+
+.reveal .slides section .content.active h2 {
+    margin-top: 0.5em; /* Adjust the margin as needed */
+}
+
+
+
+
+.reveal .sourceCode pre code {
+   /* Change to desired background color */
+    
+  margin-bottom: 1em; /* Adjust the value as needed */
+  /*border: 3px solid rgb(229, 97, 119);*/ /* este es el borde alrededor del fondo gris del codigo*/
+}
+
+.reveal .sourceCode.cell-code {
+  /*background-color: red;*/
+  border: none; 
+}
+
+
+/*.reveal .cell {
+  /*background-color: pink;
+  /*border: 3px solid greenyellow; 
+}*/
+
+.reveal .cell-output-stdout {
+  border: 1px solid rgba(128, 128, 128, 0.215);
+}
+
+
+.lenguaje {
+  font-family: monospace;
+}
+
+.archivo {
+  font-family: monospace;
+  color: gray;
+}
+
+.concepto {
+  font-weight: bold;
+  color: orange;
+}
+
+.extension {
+  font-family: monospace;
+  color: rgb(17, 43, 137);
+}
+
+.terminal {
+  font-family: monospace;
+  color: white;
+  background-color: black;
+}
+
+.tipo {
+  font-family: monospace;
+  color: purple; 
+}
+
+.paquete {
+  font-family: monospace;
+  color: rgb(135, 110, 19); 
+}
+
+.sol {
+  border: 2px solid #008578;
+  padding: 10px;
+}
+
+.bold-text {
+  font-weight: 700; /* O usa "bold" */
+}

@@ -7,6 +7,6 @@ main:
   - name: 👩🏻‍💻 Bio
     url: /
     weight: 10
-  - name: Docencia
+  - name: 👩🏻‍🏫 Docencia
     url: docencia/
-    weight: 40
+    weight: 20

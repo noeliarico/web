@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="POO_files/libs/clipboard/clipboard.min.js"></script>
+<script src="POO_files/libs/quarto-html/tabby.min.js"></script>
+<script src="POO_files/libs/quarto-html/popper.min.js"></script>
+<script src="POO_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="POO_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="POO_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="POO_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="POO_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.450">
+
+  <title>Programación Orientada a Objetos (POO)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="POO_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="POO_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="POO_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="themes_noelia/noelia_slides.css">
+  <link href="POO_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="POO_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="POO_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="POO_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script>
+      function move_titleSlide() {
+          var titleSlide = document.querySelector('section#title-slide');
+          var titleSlideClone = titleSlide.cloneNode(true);
+          titleSlideClone.id = 'title-slide-cloned';
+          document.querySelector('.reveal .slides').appendChild(titleSlideClone);
+          Reveal.sync();
+      }
+    
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        move_titleSlide();
+      });
+    </script>
+    
+    
+    <style>
+      #title-slide-cloned {
+        text-align: center
+      }
+    
+      #title-slide-cloned .subtitle {
+        margin-bottom: 2.5rem
+      }
+    </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="center">
+  <style>
+    .title-banner {
+      text-align: center;
+      padding: 2em;
+      background-color: #0085784f;
+      margin-bottom: 2em;
+    }
+    .asignatura {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .grado {
+      color: #008578; 
+    }
+
+  </style>
+  <div class="title-banner">
+    <h1 class="title">Programación Orientada a Objetos (POO)</h1>
+  </div>
+      <p class="subtitle">TEMA 1 - (Parte I)</p>
+          <p class="asignatura">PROGRAMACIÓN AVANZADA</p>
+        <p class="grado">Grado en Ciencia e Ingeniería de Datos</p>
+  </section>
+<section id="planificación-para-la-próxima-semana" class="title-slide slide level1 unnumbered center">
+<h1>Planificación para la próxima semana</h1>
+<div class="grande">
+<ul>
+<li><strong>Mañana</strong>, tendréis disponibles en el campus virtual las diapositivas que he utilizado en clase de hoy.</li>
+<li>El próximo <strong>miércoles (2 de octubre)</strong> tendréis disponible de 9:00 a 20:00 unas actividades para reforzar los conceptos de esta clase antes de la siguiente.</li>
+<li>La semana que viene <strong>comienzan las prácticas</strong>.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<section id="introducción" class="title-slide slide level1 center" data-number="1">
+<h1><span class="header-section-number">1</span> Introducción</h1>
+
+</section>
+<section id="qué-sabemos-ya" class="slide level2 unnumbered">
+<h2>¿Qué sabemos ya?</h2>
+<p><br></p>
+<p><em>(O deberíamos saber…)</em></p>
+<p><br></p>
+<p>Sabemos escribir los siguientes tipos de código:</p>
+<ul>
+<li>Código secuencial</li>
+<li>Código condicional (declaraciones if)</li>
+<li>Código repetitivo (bucles)</li>
+<li>Almacenar y reutilizar funciones</li>
+</ul>
+<p>Es necesario que resulte fácil entender el código y que sea <strong>mantenible</strong> y <strong>reutilizable</strong>.</p>
+<p><em>Realmente también deberíamos saber ya un poco (bastante) de POO…</em></p>
+</section>
+<section id="paradigmas-de-programación" class="slide level2" data-number="1.1">
+<h2><span class="header-section-number">1.1</span> Paradigmas de programación</h2>
+<p>Un paradigma de programación establece la forma en la que se <strong>estructura el código</strong> de una aplicación.</p>
+<p>Es uno de los criterios utilizados para <strong>clasificar un lenguaje de programación</strong>, aunque muchos lenguajes dan soporte a más de un paradigma.</p>
+<ol type="1">
+<li><strong>Imperativo</strong>: Se enfoca en <strong>cómo</strong> realizar tareas mediante una secuencia de instrucciones.</li>
+<li><strong>Declarativo</strong>: Describe <strong>qué</strong> debe hacerse sin especificar los pasos exactos para lograrlo.</li>
+<li><strong>Funcional</strong>: Se basa en la <strong>evaluación de funciones</strong> y evita el cambio de estado o datos mutables.</li>
+<li><strong>Paradigma Orientado a Objetos (POO)</strong>: Organiza el código en <strong>objetos</strong> que combinan datos y comportamiento.</li>
+<li><strong>Paradigma Concurrente y Paralelo</strong>: Ejecuta múltiples procesos o hilos <strong>simultáneamente</strong> para mejorar el rendimiento.</li>
+</ol>
+<p>Otros paradigmas: Lógico, Reactivo, Basado en Componentes, Basado en Eventos, Paradigma Relacional…</p>
+<p>Los paradigmas de programación <strong>pueden combinarse</strong> entre ellos.</p>
+</section></section>
+<section>
+<section id="programación-orientada-a-objetos" class="title-slide slide level1 center" data-number="2">
+<h1><span class="header-section-number">2</span> Programación Orientada a Objetos</h1>
+
+</section>
+<section id="fundamentos" class="slide level2 unnumbered">
+<h2>Fundamentos</h2>
+<p>La POO es un <strong>paradigma</strong>, es decir, una teoría que suministra la base y modelo para resolver problemas.</p>
+<p>En concreto, permite resolver <strong>problemas que surgen en el desarrollo de grandes cantidades de código</strong>. Algunos de ellos:</p>
+<ul>
+<li>Código muy largo: dificil de leer, depurar, mantener.</li>
+<li>Si algo falla, todo se rompe: si todo se ejecuta secuencialmente en el momento en el que una de las líneas falla todo lo demás deja de ejecutarse.</li>
+<li>Dificultad en la escritura colaborativa de código: si no está organizado, es difícil independizar las partes de código que debe escribir cada desarrollador.</li>
+</ul>
+</section>
+<section id="componentes-y-pilares" class="slide level2 unnumbered">
+<h2>Componentes y pilares</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Componentes:</strong></p>
+<ul>
+<li>Clases</li>
+<li>Propiedades</li>
+<li>Métodos</li>
+<li>Objetos</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Pilares</strong></p>
+<ul>
+<li>Abstracción</li>
+<li>Encapsulamiento</li>
+<li>Polimorfismo</li>
+<li>Herencia</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>La POO es un paradigma, o sea una teoría que suministra la base y modelo para resolver problemas.</p>
+<p>Abstracción:</p>
+<ul>
+<li>La idea de POO es poder dividir un problema en subproblemas más pequeños</li>
+<li>Cada clase se encarga de uno de esos subproblemas</li>
+</ul>
+<p>-Encapsulamiento - metodos dentro de clases a los que no acceden los demas -Abstracción - abstraer al usuario de ciertas implementaciones. por ej cuando creamos num aleatorios no sabemos como se hace eso. esto permite colaboración en programas grandes -Herencia - cuando creamos las clases hay mucho codigo que se repeite entonces se puede crear una estructura jerarquica para disminuir el copy/paste de código -Polimorfismo - modificar funcion especifica de una clase para que haga algo adicional o distinto</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clases-y-objetos" class="slide level2" data-number="2.1">
+<h2><span class="header-section-number">2.1</span> Clases y objetos</h2>
+<ul>
+<li><strong>clase</strong> -&gt; representación abstracta de un conjunto de objetos que comparten propiedades y comportamiento (del mismo tipo).</li>
+<li><strong>objeto</strong> -&gt; cada una de las instancias de alguna clase. Se crean durante la ejecución del código ocupando espacio en memoria.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Clases:</strong></p>
+<ul>
+<li>Plantilla que permite crear un objeto.</li>
+<li>Una clase es capaz de definir un objeto junto teniendo en cuenta sus:
+<ul>
+<li>propiedades (<strong>atributos</strong>)</li>
+<li>funcionalidades (<strong>métodos</strong>)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Objetos</strong></p>
+<p>El objeto es la <strong>instancia de una clase</strong>, consta de:</p>
+<ul>
+<li><strong>Estado</strong>: representado por los valores <strong>atributos</strong> del objeto, que reflejan sus propiedades.</li>
+<li><strong>Comportamiento</strong>: representado por los <strong>métodos</strong> del objeto, que reflejan su respuesta a a otros objetos.</li>
+<li><strong>Identidad</strong>: cada objeto tiene un <strong>nombre único</strong> que le permite interactuar con otros objetos.</li>
+</ul>
+<p>Podemos interactual con los objetos.</p>
+</div>
+</div>
+<aside class="notes">
+<p>Guardamos en memoria un objeto. Que existe hasta que la variables deja de usarse y pasa el garbage collector.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Clases</strong></p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Plantilla que define qué son y qué hacen las personas</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">class</span> Persona:</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
+<span id="cb1-6"><a href="#cb1-6"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="kw">def</span> saludar():</span>
+<span id="cb1-9"><a href="#cb1-9"></a>        <span class="bu">print</span>(<span class="st">"Hola mundo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><strong>Objetos</strong></p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Noelia"</span>) </span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(persona1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;__main__.Persona object at 0x1076ea690&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Noelia"</span>) </span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>(persona1.saludar())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>TypeError: Persona.saludar() takes 0 positional arguments but 1 was given</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 data-number="2.1.1" id="en-python-todo-es-un-objeto"><span class="header-section-number">2.1.1</span> En Python, todo es un objeto</h3>
+<p>Si algo un objeto, significa que va a tener alguna representación dentro de la memoria.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Definición de variables de varios tipos básicos</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>entero <span class="op">=</span> <span class="dv">10</span>                 <span class="co"># Tipo entero (int)</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>flotante <span class="op">=</span> <span class="fl">3.14</span>             <span class="co"># Tipo flotante (float)</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>cadena <span class="op">=</span> <span class="st">"Hola, Python"</span>     <span class="co"># Tipo cadena (str)</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>booleano <span class="op">=</span> <span class="va">True</span>             <span class="co"># Tipo booleano (bool)</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>lista <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]        <span class="co"># Tipo lista (list)</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co"># Demostración de que todo es un objeto en Python</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="bu">print</span>(entero.bit_length())   <span class="co"># Método del objeto entero: devuelve el número de bits necesarios para representar el entero</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="bu">print</span>(flotante.is_integer()) <span class="co"># Método del objeto flotante: verifica si el número es entero</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="bu">print</span>(cadena.upper())        <span class="co"># Método del objeto cadena: convierte a mayúsculas</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="bu">print</span>(booleano.__class__)    <span class="co"># Ver el tipo del objeto booleano</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="bu">print</span>(lista.append(<span class="dv">5</span>))       <span class="co"># Método del objeto lista: añade un elemento a la lista</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="co"># Todo en Python es un objeto</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="bu">print</span>(<span class="bu">type</span>(entero))          <span class="co"># &lt;class 'int'&gt;</span></span>
+<span id="cb6-17"><a href="#cb6-17"></a><span class="bu">print</span>(<span class="bu">type</span>(flotante))        <span class="co"># &lt;class 'float'&gt;</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="bu">print</span>(<span class="bu">type</span>(cadena))          <span class="co"># &lt;class 'str'&gt;</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a><span class="bu">print</span>(<span class="bu">type</span>(booleano))        <span class="co"># &lt;class 'bool'&gt;</span></span>
+<span id="cb6-20"><a href="#cb6-20"></a><span class="bu">print</span>(<span class="bu">type</span>(lista))           <span class="co"># &lt;class 'list'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4
+False
+HOLA, PYTHON
+&lt;class 'bool'&gt;
+None
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;
+&lt;class 'bool'&gt;
+&lt;class 'list'&gt;</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Definici%C3%B3n%20de%20variables%20de%20varios%20tipos%20b%C3%A1sicos%0Aentero%20%3D%2010%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Tipo%20entero%20%28int%29%0Aflotante%20%3D%203.14%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Tipo%20flotante%20%28float%29%0Acadena%20%3D%20%22Hola,%20Python%22%20%20%20%20%20%23%20Tipo%20cadena%20%28str%29%0Abooleano%20%3D%20True%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Tipo%20booleano%20%28bool%29%0Alista%20%3D%20%5B1,%202,%203,%204%5D%20%20%20%20%20%20%20%20%23%20Tipo%20lista%20%28list%29%0A%0A%23%20Demostraci%C3%B3n%20de%20que%20todo%20es%20un%20objeto%20en%20Python%0Aprint%28entero.bit_length%28%29%29%20%20%20%23%20M%C3%A9todo%20del%20objeto%20entero%3A%20devuelve%20el%20n%C3%BAmero%20de%20bits%20necesarios%20para%20representar%20el%20entero%0Aprint%28flotante.is_integer%28%29%29%20%23%20M%C3%A9todo%20del%20objeto%20flotante%3A%20verifica%20si%20el%20n%C3%BAmero%20es%20entero%0Aprint%28cadena.upper%28%29%29%20%20%20%20%20%20%20%20%23%20M%C3%A9todo%20del%20objeto%20cadena%3A%20convierte%20a%20may%C3%BAsculas%0Aprint%28booleano.__class__%29%20%20%20%20%23%20Ver%20el%20tipo%20del%20objeto%20booleano%0Aprint%28lista.append%285%29%29%20%20%20%20%20%20%20%23%20M%C3%A9todo%20del%20objeto%20lista%3A%20a%C3%B1ade%20un%20elemento%20a%20la%20lista%0A%0A%23%20Todo%20en%20Python%20es%20un%20objeto%0Aprint%28type%28entero%29%29%20%20%20%20%20%20%20%20%20%20%23%20%3Cclass%20'int'%3E%0Aprint%28type%28flotante%29%29%20%20%20%20%20%20%20%20%23%20%3Cclass%20'float'%3E%0Aprint%28type%28cadena%29%29%20%20%20%20%20%20%20%20%20%20%23%20%3Cclass%20'str'%3E%0Aprint%28type%28booleano%29%29%20%20%20%20%20%20%20%20%23%20%3Cclass%20'bool'%3E%0Aprint%28type%28lista%29%29%20%20%20%20%20%20%20%20%20%20%20%23%20%3Cclass%20'list'%3E&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=true&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section class="slide level2">
+
+<p>Por simplificar, vamos a utilizar otra visualización en la que los tipos básicos son metidos directamente en la memoria:</p>
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Definici%C3%B3n%20de%20variables%20de%20varios%20tipos%20b%C3%A1sicos%0Aentero%20%3D%2010%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Tipo%20entero%20%28int%29%0Aflotante%20%3D%203.14%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Tipo%20flotante%20%28float%29%0Acadena%20%3D%20%22Hola,%20Python%22%20%20%20%20%20%23%20Tipo%20cadena%20%28str%29%0Abooleano%20%3D%20True%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Tipo%20booleano%20%28bool%29%0Alista%20%3D%20%5B1,%202,%203,%204%5D%20%20%20%20%20%20%20%20%23%20Tipo%20lista%20%28list%29%0A%0A%23%20Demostraci%C3%B3n%20de%20que%20todo%20es%20un%20objeto%20en%20Python%0Aprint%28entero.bit_length%28%29%29%20%20%20%23%20M%C3%A9todo%20del%20objeto%20entero%3A%20devuelve%20el%20n%C3%BAmero%20de%20bits%20necesarios%20para%20representar%20el%20entero%0Aprint%28flotante.is_integer%28%29%29%20%23%20M%C3%A9todo%20del%20objeto%20flotante%3A%20verifica%20si%20el%20n%C3%BAmero%20es%20entero%0Aprint%28cadena.upper%28%29%29%20%20%20%20%20%20%20%20%23%20M%C3%A9todo%20del%20objeto%20cadena%3A%20convierte%20a%20may%C3%BAsculas%0Aprint%28booleano.__class__%29%20%20%20%20%23%20Ver%20el%20tipo%20del%20objeto%20booleano%0Aprint%28lista.append%285%29%29%20%20%20%20%20%20%20%23%20M%C3%A9todo%20del%20objeto%20lista%3A%20a%C3%B1ade%20un%20elemento%20a%20la%20lista%0A%0A%23%20Todo%20en%20Python%20es%20un%20objeto%0Aprint%28type%28entero%29%29%20%20%20%20%20%20%20%20%20%20%23%20%3Cclass%20'int'%3E%0Aprint%28type%28flotante%29%29%20%20%20%20%20%20%20%20%23%20%3Cclass%20'float'%3E%0Aprint%28type%28cadena%29%29%20%20%20%20%20%20%20%20%20%20%23%20%3Cclass%20'str'%3E%0Aprint%28type%28booleano%29%29%20%20%20%20%20%20%20%20%23%20%3Cclass%20'bool'%3E%0Aprint%28type%28lista%29%29%20%20%20%20%20%20%20%20%20%20%20%23%20%3Cclass%20'list'%3E&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section id="por-qué-usar-orientación-a-objetos" class="slide level2 unnumbered">
+<h2>¿Por qué usar orientación a objetos?</h2>
+<p><br></p>
+<p><em>(Además de que resuelve todos los problemas que mencionamos antes)</em></p>
+<p><br></p>
+<p>El desarrollador puede crear clases personalizadas en función de los requisitos de la aplicación.</p>
+<pre><code># Definición de clase
+class &lt;nombre_de_la_clase&gt;(&lt;super_clase&gt;):
+    """
+    Descripción de la clase
+    """
+
+    def __init__(self, &lt;params&gt;):
+        &lt;cod&gt;
+        ...
+
+    def &lt;nombre_del_metodo&gt;(self, &lt;params&gt;):
+        &lt;cod&gt;
+        ...
+
+...
+</code></pre>
+<p>NOTA: Los nombres de las clases se escriben siempre con la <strong>primera letra en mayúsculas</strong> usando el CapWords convention https://peps.python.org/pep-0008/#class-names</p>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="ejemplo-de-clase">Ejemplo de clase</h3>
+<p><br></p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Clase base</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="kw">class</span> Persona:</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="co">"""</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co">    Clase que define a las personas de la universidad</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co">    """</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>    universidad <span class="op">=</span> <span class="st">"Universidad de Oviedo"</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a></span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
+<span id="cb9-9"><a href="#cb9-9"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Noelia"</span>) <span class="co"># Instancio un objeto</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="bu">print</span>(persona1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;__main__.Persona object at 0x10773f260&gt;</code></pre>
+</div>
+</div>
+<p>De momento, no hemos indicado cómo <em>se imprime</em> una persona.</p>
+<p>Los objetos de Python, indican funcionalidades básicas de los operadores más comunes.</p>
+<p>¿Qué ocurre cuando sumamos? ¿Qué ocurre cuando imprimimos? etc.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>lista <span class="op">=</span> [<span class="dv">45</span>, <span class="dv">12</span>, <span class="dv">33</span>]</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="bu">print</span>(lista)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[45, 12, 33]</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Este hecho provoca los siguientes comportamientos</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="dv">5</span> <span class="op">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>7</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">"5"</span> <span class="op">+</span> <span class="st">"2"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>'52'</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">"5"</span> <span class="op">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>TypeError: can only concatenate str (not "int") to str</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="dv">3</span> <span class="op">*</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>21</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="co">"Hola"</span> <span class="op">*</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>'HolaHola'</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>] <span class="op">*</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>[1, 2, 3, 1, 2, 3, 1, 2, 3]</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 data-number="2.1.2" id="dir"><span class="header-section-number">2.1.2</span> <code>dir()</code></h3>
+<p>Añadimos un método a la clase <code>Persona</code> (luego veremos esto con más detalle).</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb25-2"><a href="#cb25-2"></a>    <span class="co">"""</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="co">    Clase que define a las personas de la universidad</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="co">    """</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a>    universidad <span class="op">=</span> <span class="st">"Universidad de Oviedo"</span></span>
+<span id="cb25-6"><a href="#cb25-6"></a></span>
+<span id="cb25-7"><a href="#cb25-7"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
+<span id="cb25-8"><a href="#cb25-8"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb25-9"><a href="#cb25-9"></a></span>
+<span id="cb25-10"><a href="#cb25-10"></a>    <span class="kw">def</span> saludar(<span class="va">self</span>):</span>
+<span id="cb25-11"><a href="#cb25-11"></a>        <span class="bu">print</span>(<span class="st">"Hola, mundo"</span>)</span>
+<span id="cb25-12"><a href="#cb25-12"></a></span>
+<span id="cb25-13"><a href="#cb25-13"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Noelia"</span>) <span class="co"># Instancio un objeto</span></span>
+<span id="cb25-14"><a href="#cb25-14"></a>persona1.saludar() <span class="co"># Invoco a un método del objeto</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mundo</code></pre>
+</div>
+</div>
+<p>La función <code>dir()</code> de Python nos muestra los diversos métodos que tiene un objeto.</p>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="bu">print</span>(<span class="bu">dir</span>(persona1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'nombre', 'saludar', 'universidad']</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 data-number="2.1.3" id="dir-en-otras-clases"><span class="header-section-number">2.1.3</span> <code>dir()</code> en otras clases</h3>
+<p>Sabiendo que en Python todo es un objeto…</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a><span class="bu">print</span>(<span class="ss">f"El tipo de la variable es </span><span class="sc">{</span><span class="bu">type</span>(a)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3"></a><span class="bu">print</span>(<span class="bu">dir</span>(a))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>El tipo de la variable es &lt;class 'int'&gt;
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'is_integer', 'numerator', 'real', 'to_bytes']</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a>b <span class="op">=</span> <span class="st">"Hola"</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="bu">print</span>(<span class="ss">f"El tipo de la variable es </span><span class="sc">{</span><span class="bu">type</span>(b)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="bu">print</span>(<span class="bu">dir</span>(b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>El tipo de la variable es &lt;class 'str'&gt;
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 data-number="2.1.4" id="qué-ocurre-en-la-memoria-cuando-creamos-un-objeto"><span class="header-section-number">2.1.4</span> ¿Qué ocurre en la memoria cuando creamos un objeto?</h3>
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Persona%3A%0A%20%20%20%20%22%22%22%0A%20%20%20%20Clase%20que%20define%20a%20las%20personas%20de%20la%20universidad%0A%20%20%20%20%22%22%22%0A%20%20%20%20universidad%20%3D%20%22Universidad%20de%20Oviedo%22%0A%0A%20%20%20%20def%20__init__%28self,%20nombre%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20nombre%0A%0A%20%20%20%20def%20saludar%28self%29%3A%0A%20%20%20%20%20%20%20%20print%28%22Hola,%20mundo%22%29%0A%0Apersona1%20%3D%20Persona%28%22Noelia%22%29%20%23%20Instancio%20un%20objeto%0Apersona1.saludar%28%29%20%23%20Invoco%20a%20un%20m%C3%A9todo%20del%20objeto%0Apersona2%20%3D%20Persona%28%22David%22%29%20%23%20Instancio%20otro%20objeto%0Apersona2.saludar%28%29%20%23%20Invoco%20a%20un%20m%C3%A9todo%20del%20objeto&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section id="constructor" class="slide level2" data-number="2.2">
+<h2><span class="header-section-number">2.2</span> Constructor</h2>
+<ul>
+<li>Primer método que se ejecuta cuando inicializamos una clase automáticamente</li>
+<li>Se llama siempre <code>__init__()</code></li>
+<li>Puede recibir parámetros de entrada</li>
+<li>Recibe como primer parámetro <code>self</code>, y luego los parámetros necesarios para dar valor a los atributos de la clase</li>
+</ul>
+<h3 data-number="2.2.1" id="self"><span class="header-section-number">2.2.1</span> <code>self</code></h3>
+<ul>
+<li>En Python, todos los métodos de una clase, incluidos el constructor, comienzan con un parámetro llamado <code>self</code>, seguido de los parametros propios del metodo</li>
+<li>El <code>self</code> permite acceder a las variables del propio objeto</li>
+</ul>
+</section>
+<section id="qué-ocurre-si-no-ponemos-self-a-un-método" class="slide level2 unnumbered">
+<h2>¿Qué ocurre si no ponemos <code>self</code> a un método?</h2>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb33-2"><a href="#cb33-2"></a>    </span>
+<span id="cb33-3"><a href="#cb33-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre):</span>
+<span id="cb33-4"><a href="#cb33-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb33-5"><a href="#cb33-5"></a></span>
+<span id="cb33-6"><a href="#cb33-6"></a>    <span class="kw">def</span> saludar():</span>
+<span id="cb33-7"><a href="#cb33-7"></a>        <span class="bu">print</span>(<span class="st">"Hola, mundo"</span>)</span>
+<span id="cb33-8"><a href="#cb33-8"></a></span>
+<span id="cb33-9"><a href="#cb33-9"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Noelia"</span>) <span class="co"># Instancio un objeto</span></span>
+<span id="cb33-10"><a href="#cb33-10"></a>persona1.saludar() <span class="co"># Invoco a un método del objeto</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>TypeError: Persona.saludar() takes 0 positional arguments but 1 was given</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Funcionamiento correcto:</p>
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Persona%3A%0A%20%20%20%20%0A%20%20%20%20def%20__init__%28self,%20nombre%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20nombre%0A%0A%20%20%20%20def%20saludar%28self%29%3A%0A%20%20%20%20%20%20%20%20print%28%22Hola,%20mundo%22%29%0A%0Apersona1%20%3D%20Persona%28%22Noelia%22%29%20%23%20Instancio%20un%20objeto%0Apersona1.saludar%28%29%20%23%20Invoco%20a%20un%20m%C3%A9todo%20del%20objeto&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section class="slide level2">
+
+<p>Funcionamiento incorrecto:</p>
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Persona%3A%0A%20%20%20%20%0A%20%20%20%20def%20__init__%28self,%20nombre%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20nombre%0A%0A%20%20%20%20def%20saludar%28%29%3A%0A%20%20%20%20%20%20%20%20print%28%22Hola,%20mundo%22%29%0A%0Apersona1%20%3D%20Persona%28%22Noelia%22%29%20%23%20Instancio%20un%20objeto%0Apersona1.saludar%28%29%20%23%20Invoco%20a%20un%20m%C3%A9todo%20del%20objeto&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="y-si-la-clase-no-tiene-constructor">¿Y si la clase no tiene constructor?</h3>
+<p><br></p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb35-2"><a href="#cb35-2"></a>    </span>
+<span id="cb35-3"><a href="#cb35-3"></a>    <span class="kw">def</span> saludar(<span class="va">self</span>):</span>
+<span id="cb35-4"><a href="#cb35-4"></a>        <span class="bu">print</span>(<span class="st">"Hola, mundo"</span>)</span>
+<span id="cb35-5"><a href="#cb35-5"></a></span>
+<span id="cb35-6"><a href="#cb35-6"></a>persona1 <span class="op">=</span> Persona() <span class="co"># Instancio un objeto</span></span>
+<span id="cb35-7"><a href="#cb35-7"></a>persona1.saludar() <span class="co"># Invoco a un método del objeto</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, mundo</code></pre>
+</div>
+</div>
+<p><br> <strong>Funciona!!</strong>, ¿cómo es posible? sin constructor!!</p>
+<p><br></p>
+<p>Realmente, el constructor de objetos es el método <code>__new__()</code> que, por defecto, crea una instancia e inmediatamente después invoca a <code>__init__()</code> para realizar las inicializaciones de atributos oportunas.</p>
+<aside class="notes">
+<p>Primero y, a no ser que lo indiquemos explicitamente, el unico que se ejecuta al instanciar una clase</p>
+<p>El self hace referencia una instancia. Realmente no es necesario que se llame self pero por convención se hace así</p>
+<p>Realmente, el constructor de objetos es el método new <strong> </strong> () que, por defecto, crea una instancia e inmediatamente después invoca a init <strong> </strong> () para inicializarla adecuadamente. Sólo es necesario definir new <strong> </strong> () en casos muy par?culares, así que, a todos los efectos, vamos a considerar que init () es el constructor.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ejemplo" class="slide level2" data-number="2.3">
+<h2><span class="header-section-number">2.3</span> Ejemplo</h2>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb37-2"><a href="#cb37-2"></a>    <span class="co">"""</span></span>
+<span id="cb37-3"><a href="#cb37-3"></a><span class="co">    La clase personas define a una persona en base a sus atributos</span></span>
+<span id="cb37-4"><a href="#cb37-4"></a><span class="co">    """</span></span>
+<span id="cb37-5"><a href="#cb37-5"></a></span>
+<span id="cb37-6"><a href="#cb37-6"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad, es_alumno, idiomas):</span>
+<span id="cb37-7"><a href="#cb37-7"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb37-8"><a href="#cb37-8"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb37-9"><a href="#cb37-9"></a>        <span class="va">self</span>.es_alumno <span class="op">=</span> es_alumno</span>
+<span id="cb37-10"><a href="#cb37-10"></a>        <span class="va">self</span>.idiomas <span class="op">=</span> idiomas</span>
+<span id="cb37-11"><a href="#cb37-11"></a></span>
+<span id="cb37-12"><a href="#cb37-12"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>, <span class="va">True</span>, [<span class="st">"Español"</span>, <span class="st">"Inglés"</span>])</span>
+<span id="cb37-13"><a href="#cb37-13"></a><span class="bu">print</span>(persona1.nombre)</span>
+<span id="cb37-14"><a href="#cb37-14"></a><span class="bu">print</span>(persona1.edad)</span>
+<span id="cb37-15"><a href="#cb37-15"></a><span class="bu">print</span>(persona1.es_alumno)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Ana
+20
+True</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Persona%3A%0A%20%20%20%20%22%22%22%0A%20%20%20%20La%20clase%20personas%20define%20a%20una%20persona%20en%20base%20a%20sus%20atributos%0A%20%20%20%20%22%22%22%0A%0A%20%20%20%20def%20__init__%28self,%20nombre,%20edad,%20es_alumno,%20idiomas%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20nombre%0A%20%20%20%20%20%20%20%20self.edad%20%3D%20edad%0A%20%20%20%20%20%20%20%20self.es_alumno%20%3D%20es_alumno%0A%20%20%20%20%20%20%20%20self.idiomas%20%3D%20idiomas%0A%0Apersona1%20%3D%20Persona%28%22Ana%22,%2020,%20True,%20%5B%22Espa%C3%B1ol%22,%20%22Ingl%C3%A9s%22%5D%29%0Aprint%28persona1.nombre%29%0Aprint%28persona1.edad%29%0Aprint%28persona1.es_alumno%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section id="archivos-.py-más-largos" class="slide level2" data-number="2.4">
+<h2><span class="header-section-number">2.4</span> Archivos <code>.py</code> más largos</h2>
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=saludo%20%3D%20%22Hola%20mundo%22%0A%0Adef%20adios%28%29%3A%0A%20%20%20%20return%20%22Hasta%20luego%22%0A%0Aclass%20Persona%3A%0A%20%20%20%20%22%22%22%0A%20%20%20%20La%20clase%20personas%20define%20a%20una%20persona%20en%20base%20a%20sus%20atributos%0A%20%20%20%20%22%22%22%0A%0A%20%20%20%20def%20__init__%28self,%20nombre,%20edad%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20nombre%0A%20%20%20%20%20%20%20%20self.edad%20%3D%20edad%0A%0Apersona1%20%3D%20Persona%28%22Ana%22,%2020%29%0Aprint%28persona1.nombre%29%0Aprint%28persona1.edad%29%0A%0Adespedida%20%3D%20adios%28%29%0Aprint%28despedida%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=false&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="funciona-esto">¿Funciona esto?</h3>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb39-2"><a href="#cb39-2"></a></span>
+<span id="cb39-3"><a href="#cb39-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, el_nombre, la_edad):</span>
+<span id="cb39-4"><a href="#cb39-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> el_nombre</span>
+<span id="cb39-5"><a href="#cb39-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> la_edad</span>
+<span id="cb39-6"><a href="#cb39-6"></a></span>
+<span id="cb39-7"><a href="#cb39-7"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb39-8"><a href="#cb39-8"></a><span class="bu">print</span>(persona1.nombre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="funciona-esto-1">¿Funciona esto?</h3>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb40-2"><a href="#cb40-2"></a></span>
+<span id="cb40-3"><a href="#cb40-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, el_nombre, la_edad):</span>
+<span id="cb40-4"><a href="#cb40-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> el_nombre</span>
+<span id="cb40-5"><a href="#cb40-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> la_edad</span>
+<span id="cb40-6"><a href="#cb40-6"></a></span>
+<span id="cb40-7"><a href="#cb40-7"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb40-8"><a href="#cb40-8"></a><span class="bu">print</span>(persona1.nombre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Ana</code></pre>
+</div>
+</div>
+<p><br></p>
+<p>Sí, el nombre de los parámetros no tiene por qué coincidir con el de los atributos, aunque es normal que sí coincida.</p>
+</section>
+<section class="slide level2">
+
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Persona%3A%0A%20%20%20%20%22%22%22%0A%20%20%20%20La%20clase%20personas%20define%0A%20%20%20%20%22%22%22%0A%0A%20%20%20%20def%20__init__%28self,%20el_nombre,%20la_edad%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20el_nombre%0A%20%20%20%20%20%20%20%20self.edad%20%3D%20la_edad%0A%0Apersona1%20%3D%20Persona%28%22Ana%22,%2020%29%0Aprint%28persona1.nombre%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="y-esto-funciona">Y esto, ¿funciona?</h3>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb42-2"><a href="#cb42-2"></a></span>
+<span id="cb42-3"><a href="#cb42-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, el_nombre, la_edad):</span>
+<span id="cb42-4"><a href="#cb42-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> el_nombre</span>
+<span id="cb42-5"><a href="#cb42-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> la_edad</span>
+<span id="cb42-6"><a href="#cb42-6"></a></span>
+<span id="cb42-7"><a href="#cb42-7"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb42-8"><a href="#cb42-8"></a><span class="bu">print</span>(persona1.el_nombre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="y-esto-funciona-1">Y esto, ¿funciona?</h3>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb43-2"><a href="#cb43-2"></a></span>
+<span id="cb43-3"><a href="#cb43-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, el_nombre, la_edad):</span>
+<span id="cb43-4"><a href="#cb43-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> el_nombre</span>
+<span id="cb43-5"><a href="#cb43-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> la_edad</span>
+<span id="cb43-6"><a href="#cb43-6"></a></span>
+<span id="cb43-7"><a href="#cb43-7"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb43-8"><a href="#cb43-8"></a><span class="bu">print</span>(persona1.el_nombre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>AttributeError: 'Persona' object has no attribute 'el_nombre'</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Persona%3A%0A%0A%20%20%20%20def%20__init__%28self,%20el_nombre,%20la_edad%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20el_nombre%0A%20%20%20%20%20%20%20%20self.edad%20%3D%20la_edad%0A%0Apersona1%20%3D%20Persona%28%22Ana%22,%2020%29%0Aprint%28persona1.el_nombre%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=7&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section id="haciendo-uso-de-los-atributos" class="slide level2" data-number="2.5">
+<h2><span class="header-section-number">2.5</span> Haciendo uso de los atributos</h2>
+<p>Lo interesante de que las clases tengan atributos, es poder usarlos en los métodos.</p>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb45-2"><a href="#cb45-2"></a></span>
+<span id="cb45-3"><a href="#cb45-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb45-4"><a href="#cb45-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb45-5"><a href="#cb45-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb45-6"><a href="#cb45-6"></a>    </span>
+<span id="cb45-7"><a href="#cb45-7"></a>    <span class="kw">def</span> presentarse(<span class="va">self</span>):</span>
+<span id="cb45-8"><a href="#cb45-8"></a>        <span class="cf">return</span> <span class="ss">f"Hola, me llamo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss"> y tengo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>edad<span class="sc">}</span><span class="ss"> años."</span></span>
+<span id="cb45-9"><a href="#cb45-9"></a></span>
+<span id="cb45-10"><a href="#cb45-10"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb45-11"><a href="#cb45-11"></a><span class="bu">print</span>(persona1.presentarse())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, me llamo Ana y tengo 20 años.</code></pre>
+</div>
+</div>
+</section>
+<section id="modifica-atributos" class="slide level2" data-number="2.6">
+<h2><span class="header-section-number">2.6</span> Modifica atributos</h2>
+<p>Para modificar los atributos de una instancia accediendo a ellos y asignando un nuevo valor</p>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb47-2"><a href="#cb47-2"></a></span>
+<span id="cb47-3"><a href="#cb47-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb47-4"><a href="#cb47-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb47-5"><a href="#cb47-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb47-6"><a href="#cb47-6"></a>    </span>
+<span id="cb47-7"><a href="#cb47-7"></a>    <span class="kw">def</span> presentarse(<span class="va">self</span>):</span>
+<span id="cb47-8"><a href="#cb47-8"></a>        <span class="cf">return</span> <span class="ss">f"Hola, me llamo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss"> y tengo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>edad<span class="sc">}</span><span class="ss"> años."</span></span>
+<span id="cb47-9"><a href="#cb47-9"></a></span>
+<span id="cb47-10"><a href="#cb47-10"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb47-11"><a href="#cb47-11"></a><span class="bu">print</span>(persona1.presentarse())</span>
+<span id="cb47-12"><a href="#cb47-12"></a>persona1.nombre <span class="op">=</span> <span class="st">"Rodrigo"</span></span>
+<span id="cb47-13"><a href="#cb47-13"></a><span class="bu">print</span>(persona1.presentarse())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, me llamo Ana y tengo 20 años.
+Hola, me llamo Rodrigo y tengo 20 años.</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Persona%3A%0A%0A%20%20%20%20def%20__init__%28self,%20nombre,%20edad%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20nombre%0A%20%20%20%20%20%20%20%20self.edad%20%3D%20edad%0A%20%20%20%20%0A%20%20%20%20def%20presentarse%28self%29%3A%0A%20%20%20%20%20%20%20%20return%20f%22Hola,%20me%20llamo%20%7Bself.nombre%7D%20y%20tengo%20%7Bself.edad%7D%20a%C3%B1os.%22%0A%0Apersona1%20%3D%20Persona%28%22Ana%22,%2020%29%0Aprint%28persona1.presentarse%28%29%29%0Apersona1.nombre%20%3D%20%22Rodrigo%22%0Aprint%28persona1.presentarse%28%29%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section id="los-parámetros-del-constructor" class="slide level2" data-number="2.7">
+<h2><span class="header-section-number">2.7</span> Los parámetros del constructor</h2>
+<p>Podemos agregar parámetros por defecto</p>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb49-2"><a href="#cb49-2"></a></span>
+<span id="cb49-3"><a href="#cb49-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb49-4"><a href="#cb49-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb49-5"><a href="#cb49-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb49-6"><a href="#cb49-6"></a>        <span class="va">self</span>.<span class="bu">dir</span> <span class="op">=</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Y también opcionales:</p>
+<div class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb50-2"><a href="#cb50-2"></a></span>
+<span id="cb50-3"><a href="#cb50-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad, universidad <span class="op">=</span> <span class="st">"Universidad de Oviedo"</span>):</span>
+<span id="cb50-4"><a href="#cb50-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb50-5"><a href="#cb50-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb50-6"><a href="#cb50-6"></a>        <span class="va">self</span>.<span class="bu">dir</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb50-7"><a href="#cb50-7"></a>        <span class="va">self</span>.universidad <span class="op">=</span> universidad</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="tipos-de-atributos" class="slide level2" data-number="2.8">
+<h2><span class="header-section-number">2.8</span> Tipos de atributos</h2>
+<ul>
+<li>Los que pueden tomar <strong>un valor diferente en cada objeto</strong>.
+<ul>
+<li>Son variables propias de cada objeto.</li>
+<li>A estos se les suele denominar únicamente <strong>atributos</strong> a secas.</li>
+<li>Se definen dentro del constructor.</li>
+</ul></li>
+<li>Los <strong>atributos de clase</strong>
+<ul>
+<li>Son propiedades inherentes a la clase en la que se definen</li>
+<li>Su valor es compartido por todos los objetos de la misma clase.</li>
+<li>Se definen dentro del cuerpo de la clase, al mismo nivel que los métodos y, generalmente, antes que éstos.</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:80%;">
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb51-2"><a href="#cb51-2"></a></span>
+<span id="cb51-3"><a href="#cb51-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb51-4"><a href="#cb51-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb51-5"><a href="#cb51-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb52-2"><a href="#cb52-2"></a></span>
+<span id="cb52-3"><a href="#cb52-3"></a>    universidad <span class="op">=</span> <span class="st">"Universidad de Oviedo"</span></span>
+<span id="cb52-4"><a href="#cb52-4"></a></span>
+<span id="cb52-5"><a href="#cb52-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb52-6"><a href="#cb52-6"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb52-7"><a href="#cb52-7"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:20%;">
+<p>…</p>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1"></a><span class="kw">class</span> Calculadora:</span>
+<span id="cb53-2"><a href="#cb53-2"></a></span>
+<span id="cb53-3"><a href="#cb53-3"></a>    pi <span class="op">=</span> <span class="fl">3.1415</span></span>
+<span id="cb53-4"><a href="#cb53-4"></a></span>
+<span id="cb53-5"><a href="#cb53-5"></a>    ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="destructor" class="slide level2" data-number="2.9">
+<h2><span class="header-section-number">2.9</span> Destructor</h2>
+<ul>
+<li>Método que sirve para <strong>eliminar instancias</strong> de una clase</li>
+<li>No es obligatorio (de hecho es poco común)</li>
+<li>Se define como el método <code>__del__()</code></li>
+<li>Se invoca automáticamente al utilizar el comando de Python <code>del</code></li>
+<li>Puede ser útil para liberar memoria</li>
+</ul>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb54-2"><a href="#cb54-2"></a></span>
+<span id="cb54-3"><a href="#cb54-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad, universidad <span class="op">=</span> <span class="st">"Universidad de Oviedo"</span>):</span>
+<span id="cb54-4"><a href="#cb54-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb54-5"><a href="#cb54-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb54-6"><a href="#cb54-6"></a>        <span class="va">self</span>.<span class="bu">dir</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb54-7"><a href="#cb54-7"></a>        <span class="va">self</span>.universidad <span class="op">=</span> universidad</span>
+<span id="cb54-8"><a href="#cb54-8"></a>        <span class="bu">print</span>(<span class="st">"Inicio el objeto"</span>)</span>
+<span id="cb54-9"><a href="#cb54-9"></a></span>
+<span id="cb54-10"><a href="#cb54-10"></a>    <span class="kw">def</span> <span class="fu">__del__</span>(<span class="va">self</span>):</span>
+<span id="cb54-11"><a href="#cb54-11"></a>        <span class="bu">print</span>(<span class="st">"Destruyo el objeto"</span>)</span>
+<span id="cb54-12"><a href="#cb54-12"></a></span>
+<span id="cb54-13"><a href="#cb54-13"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb54-14"><a href="#cb54-14"></a><span class="bu">print</span>(persona1.nombre)</span>
+<span id="cb54-15"><a href="#cb54-15"></a><span class="kw">del</span>(persona1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Inicio el objeto
+Ana
+Destruyo el objeto</code></pre>
+</div>
+</div>
+</section>
+<section id="crear-objetos-desde-otros-objetos" class="slide level2" data-number="2.10">
+<h2><span class="header-section-number">2.10</span> Crear objetos desde otros objetos</h2>
+<p><br></p>
+<div class="grande">
+<p>Es <strong>muy importante</strong> entender lo que está pasando en memoria cuando creamos objetos nuevos.</p>
+<p><br></p>
+<ul>
+<li>¿A dónde apunta cada variable?</li>
+<li>¿Cuándo apuntan dos variables al mismo objeto?</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="tipos-simples">Tipos simples</h3>
+<p><br></p>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb56-2"><a href="#cb56-2"></a>b <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb56-3"><a href="#cb56-3"></a>c <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb56-4"><a href="#cb56-4"></a>b <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb56-5"><a href="#cb56-5"></a><span class="bu">print</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>¿Qué imprime este código?</p>
+<ol type="1">
+<li>8</li>
+<li>15</li>
+<li>No lo sé</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="tipos-simples-1">Tipos simples</h3>
+<p><br></p>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb57-2"><a href="#cb57-2"></a>b <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb57-3"><a href="#cb57-3"></a>c <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb57-4"><a href="#cb57-4"></a>b <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb57-5"><a href="#cb57-5"></a><span class="bu">print</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>8</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="tipos-simples-2">Tipos simples</h3>
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%205%0Ab%20%3D%203%0Ac%20%3D%20a%20%2B%20b%0Ab%20%3D%2010%0Aprint%28c%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="listas">Listas</h3>
+<p><br></p>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1"></a>l1 <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">33</span>]</span>
+<span id="cb59-2"><a href="#cb59-2"></a>l2 <span class="op">=</span> l1</span>
+<span id="cb59-3"><a href="#cb59-3"></a>l1[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb59-4"><a href="#cb59-4"></a><span class="bu">print</span>(l2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>¿Qué imprime este código?</p>
+<ol type="1">
+<li>[10, 50, 33]</li>
+<li>20</li>
+<li>[10, 20, 33]</li>
+<li>No lo sé</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="listas-1">Listas</h3>
+<p><br></p>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1"></a>l1 <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">33</span>]</span>
+<span id="cb60-2"><a href="#cb60-2"></a>l2 <span class="op">=</span> l1</span>
+<span id="cb60-3"><a href="#cb60-3"></a>l1[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb60-4"><a href="#cb60-4"></a><span class="bu">print</span>(l2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[10, 20, 33]</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="listas-2">Listas</h3>
+<p><br></p>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=l1%20%3D%20%5B10,%2050,%2033%5D%0Al2%20%3D%20l1%0Al1%5B1%5D%20%3D%2020%0Aprint%28l2%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section class="slide level2">
+
+<h3 class="unnumbered" id="clases-definidas-por-el-programador">Clases definidas por el programador</h3>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb62-2"><a href="#cb62-2"></a></span>
+<span id="cb62-3"><a href="#cb62-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb62-4"><a href="#cb62-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb62-5"><a href="#cb62-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb62-6"><a href="#cb62-6"></a>    </span>
+<span id="cb62-7"><a href="#cb62-7"></a>    <span class="kw">def</span> presentarse(<span class="va">self</span>):</span>
+<span id="cb62-8"><a href="#cb62-8"></a>        <span class="cf">return</span> <span class="ss">f"Hola, me llamo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss"> y tengo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>edad<span class="sc">}</span><span class="ss"> años."</span></span>
+<span id="cb62-9"><a href="#cb62-9"></a></span>
+<span id="cb62-10"><a href="#cb62-10"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb62-11"><a href="#cb62-11"></a><span class="bu">print</span>(persona1.presentarse())</span>
+<span id="cb62-12"><a href="#cb62-12"></a>persona2 <span class="op">=</span> persona1</span>
+<span id="cb62-13"><a href="#cb62-13"></a><span class="bu">print</span>(persona2.presentarse())</span>
+<span id="cb62-14"><a href="#cb62-14"></a>persona1.nombre <span class="op">=</span> <span class="st">"Claudia"</span></span>
+<span id="cb62-15"><a href="#cb62-15"></a><span class="bu">print</span>(persona2.presentarse())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>¿Qué crees que imprime la última línea?</p>
+<ol type="1">
+<li>Hola, me llamo Ana y tengo 20 años.</li>
+<li>Hola, me llamo Claudia y tengo 20 años.</li>
+<li>No lo sé</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<p>En las clases definidas por el desarrollador, la creación de un objeto a partir de otro se realiza por defecto como en las listas.</p>
+<div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb63-2"><a href="#cb63-2"></a></span>
+<span id="cb63-3"><a href="#cb63-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb63-4"><a href="#cb63-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb63-5"><a href="#cb63-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb63-6"><a href="#cb63-6"></a>    </span>
+<span id="cb63-7"><a href="#cb63-7"></a>    <span class="kw">def</span> presentarse(<span class="va">self</span>):</span>
+<span id="cb63-8"><a href="#cb63-8"></a>        <span class="cf">return</span> <span class="ss">f"Hola, me llamo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss"> y tengo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>edad<span class="sc">}</span><span class="ss"> años."</span></span>
+<span id="cb63-9"><a href="#cb63-9"></a></span>
+<span id="cb63-10"><a href="#cb63-10"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb63-11"><a href="#cb63-11"></a><span class="bu">print</span>(persona1.presentarse())</span>
+<span id="cb63-12"><a href="#cb63-12"></a>persona2 <span class="op">=</span> persona1</span>
+<span id="cb63-13"><a href="#cb63-13"></a><span class="bu">print</span>(persona2.presentarse())</span>
+<span id="cb63-14"><a href="#cb63-14"></a>persona1.nombre <span class="op">=</span> <span class="st">"Claudia"</span></span>
+<span id="cb63-15"><a href="#cb63-15"></a><span class="bu">print</span>(persona2.presentarse())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hola, me llamo Ana y tengo 20 años.
+Hola, me llamo Ana y tengo 20 años.
+Hola, me llamo Claudia y tengo 20 años.</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Persona%3A%0A%0A%20%20%20%20def%20__init__%28self,%20nombre,%20edad%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20nombre%0A%20%20%20%20%20%20%20%20self.edad%20%3D%20edad%0A%20%20%20%20%0A%20%20%20%20def%20presentarse%28self%29%3A%0A%20%20%20%20%20%20%20%20return%20f%22Hola,%20me%20llamo%20%7Bself.nombre%7D%20y%20tengo%20%7Bself.edad%7D%20a%C3%B1os.%22%0A%0Apersona1%20%3D%20Persona%28%22Ana%22,%2020%29%0Aprint%28persona1.presentarse%28%29%29%0Apersona2%20%3D%20persona1%0Aprint%28persona2.presentarse%28%29%29%0Apersona1.nombre%20%3D%20%22Claudia%22%0Aprint%28persona2.presentarse%28%29%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=true&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section id="creación-por-copia" class="slide level2" data-number="2.11">
+<h2><span class="header-section-number">2.11</span> Creación por copia</h2>
+<p>Sin embargo, podemos forzar que esta creación sea por copia usando el módulo <code>copy</code>, que implementa las funciones, <code>copy()</code> y <code>deepcopy()</code>, que sirven para hacer copias simples y recursivas, respectivamente.</p>
+<ul>
+<li><p>La diferencia entre <code>copy()</code> y <code>deepcopy()</code> solo se nota cuando al crear copias de objetos compuestos.</p></li>
+<li><p>Los objetos compuesto son aquellos en los que alguno de sus atributos es también un objeto (no simple).</p></li>
+<li><p><code>copy()</code> crea un nuevo objeto y luego coloca referencias que apuntan a los objetos que componen al original, sin duplicarlos</p></li>
+<li><p><code>deepcopy()</code> crea un nuevo objeto y luego crea, recursivamente, copias de los objetos que componen a éste.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1"></a><span class="im">from</span> copy <span class="im">import</span> copy</span>
+<span id="cb65-2"><a href="#cb65-2"></a></span>
+<span id="cb65-3"><a href="#cb65-3"></a><span class="kw">class</span> Persona:</span>
+<span id="cb65-4"><a href="#cb65-4"></a></span>
+<span id="cb65-5"><a href="#cb65-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb65-6"><a href="#cb65-6"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb65-7"><a href="#cb65-7"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb65-8"><a href="#cb65-8"></a>    </span>
+<span id="cb65-9"><a href="#cb65-9"></a>    <span class="kw">def</span> presentarse(<span class="va">self</span>):</span>
+<span id="cb65-10"><a href="#cb65-10"></a>        <span class="cf">return</span> <span class="ss">f"Hola, me llamo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss"> y tengo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>edad<span class="sc">}</span><span class="ss"> años."</span></span>
+<span id="cb65-11"><a href="#cb65-11"></a></span>
+<span id="cb65-12"><a href="#cb65-12"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb65-13"><a href="#cb65-13"></a><span class="co"># en vez de hacer persona1 = persona2</span></span>
+<span id="cb65-14"><a href="#cb65-14"></a>persona2 <span class="op">=</span> copy(persona1)</span>
+<span id="cb65-15"><a href="#cb65-15"></a>persona1.nombre <span class="op">=</span> <span class="st">"Claudia"</span></span>
+<span id="cb65-16"><a href="#cb65-16"></a><span class="bu">print</span>(persona2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;__main__.Persona object at 0x10b8d8650&gt;</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<iframe width="100%" height="100%" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20copy%20import%20copy%0A%0Aclass%20Persona%3A%0A%0A%20%20%20%20def%20__init__%28self,%20nombre,%20edad%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20nombre%0A%20%20%20%20%20%20%20%20self.edad%20%3D%20edad%0A%20%20%20%20%0A%20%20%20%20def%20presentarse%28self%29%3A%0A%20%20%20%20%20%20%20%20return%20f%22Hola,%20me%20llamo%20%7Bself.nombre%7D%20y%20tengo%20%7Bself.edad%7D%20a%C3%B1os.%22%0A%0Apersona1%20%3D%20Persona%28%22Ana%22,%2020%29%0Apersona2%20%3D%20copy%28persona1%29%0Apersona1.nombre%20%3D%20%22Claudia%22%0Aprint%28persona2%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section class="slide level2">
+
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1"></a><span class="im">from</span> copy <span class="im">import</span> deepcopy</span>
+<span id="cb67-2"><a href="#cb67-2"></a></span>
+<span id="cb67-3"><a href="#cb67-3"></a><span class="kw">class</span> Coche:</span>
+<span id="cb67-4"><a href="#cb67-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, marca, anio, revisiones):</span>
+<span id="cb67-5"><a href="#cb67-5"></a>        <span class="va">self</span>.marca <span class="op">=</span> marca        <span class="co"># Atributo de tipo str</span></span>
+<span id="cb67-6"><a href="#cb67-6"></a>        <span class="va">self</span>.anio <span class="op">=</span> anio          <span class="co"># Atributo de tipo numérico</span></span>
+<span id="cb67-7"><a href="#cb67-7"></a>        <span class="va">self</span>.revisiones <span class="op">=</span> revisiones  <span class="co"># Atributo de tipo lista</span></span>
+<span id="cb67-8"><a href="#cb67-8"></a></span>
+<span id="cb67-9"><a href="#cb67-9"></a>    <span class="kw">def</span> imprime_datos(<span class="va">self</span>):</span>
+<span id="cb67-10"><a href="#cb67-10"></a>        <span class="bu">print</span>(<span class="ss">f"Marca: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>marca<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb67-11"><a href="#cb67-11"></a>        <span class="bu">print</span>(<span class="ss">f"Año: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>anio<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb67-12"><a href="#cb67-12"></a>        <span class="bu">print</span>(<span class="ss">f"Revisiones: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>revisiones<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell columns column-output-location" data-execution_count="40">
+<div class="column">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1"></a><span class="co"># Crear el primer objeto</span></span>
+<span id="cb68-2"><a href="#cb68-2"></a>coche1 <span class="op">=</span> Coche(<span class="st">'Toyota'</span>, <span class="dv">2020</span>, [<span class="st">'Aceite'</span>, <span class="st">'Frenos'</span>])</span>
+<span id="cb68-3"><a href="#cb68-3"></a></span>
+<span id="cb68-4"><a href="#cb68-4"></a><span class="co"># Imprimir el estado inicial de coche1</span></span>
+<span id="cb68-5"><a href="#cb68-5"></a><span class="bu">print</span>(<span class="st">"coche1 es:"</span>)</span>
+<span id="cb68-6"><a href="#cb68-6"></a>coche1.imprime_datos()</span>
+<span id="cb68-7"><a href="#cb68-7"></a></span>
+<span id="cb68-8"><a href="#cb68-8"></a><span class="co"># Hacer una copia profunda de coche1</span></span>
+<span id="cb68-9"><a href="#cb68-9"></a>coche2 <span class="op">=</span> deepcopy(coche1)</span>
+<span id="cb68-10"><a href="#cb68-10"></a></span>
+<span id="cb68-11"><a href="#cb68-11"></a><span class="co"># Modificar el segundo objeto (copia profunda)</span></span>
+<span id="cb68-12"><a href="#cb68-12"></a>coche2.marca <span class="op">=</span> <span class="st">'Honda'</span></span>
+<span id="cb68-13"><a href="#cb68-13"></a>coche2.anio <span class="op">=</span> <span class="dv">2022</span></span>
+<span id="cb68-14"><a href="#cb68-14"></a>coche2.revisiones[<span class="dv">0</span>] <span class="op">=</span> <span class="st">'Motor'</span></span>
+<span id="cb68-15"><a href="#cb68-15"></a></span>
+<span id="cb68-16"><a href="#cb68-16"></a><span class="co"># Imprimir el estado de coche1 después de modificar coche2</span></span>
+<span id="cb68-17"><a href="#cb68-17"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Tras cambiar coche2, coche1 es:"</span>)</span>
+<span id="cb68-18"><a href="#cb68-18"></a>coche1.imprime_datos()</span>
+<span id="cb68-19"><a href="#cb68-19"></a></span>
+<span id="cb68-20"><a href="#cb68-20"></a><span class="co"># Imprimir el estado de coche2 para ver los cambios</span></span>
+<span id="cb68-21"><a href="#cb68-21"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Coche2 es:"</span>)</span>
+<span id="cb68-22"><a href="#cb68-22"></a>coche2.imprime_datos()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>coche1 es:
+Marca: Toyota
+Año: 2020
+Revisiones: ['Aceite', 'Frenos']
+
+Tras cambiar coche2, coche1 es:
+Marca: Toyota
+Año: 2020
+Revisiones: ['Aceite', 'Frenos']
+
+Coche2 es:
+Marca: Honda
+Año: 2022
+Revisiones: ['Motor', 'Frenos']</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="tipos-de-métodos" class="slide level2" data-number="2.12">
+<h2><span class="header-section-number">2.12</span> Tipos de métodos</h2>
+<ul>
+<li>Métodos de <strong>instancia</strong>: métodos de cada objeto
+<ul>
+<li>Toman el parámetro <code>self</code> como primer parámetro, representando la instancia del método. Pueden tener más parámetros.</li>
+</ul></li>
+<li>Métodos <strong>estáticos</strong>: vinculados a la clase y no al objeto.
+<ul>
+<li>Se pueden utilizar sin instanciar. Se definen usando un decorador <code>@staticmethod</code>.</li>
+</ul></li>
+<li>Métodos de <strong>clase</strong>:
+<ul>
+<li>Emplemos el decorador <code>@classmethod</code></li>
+<li>En lugar de tomar un <code>self</code> como primer parámetro, toman un <code>cls</code> que apunta a la clase y no a la instancia del objeto cuando se llama al metodo.</li>
+<li>Como solo tiene acceso al <code>cls</code>, no pueden modificar el estado de la instancia del objeto (eso requeriría acceso a <code>self</code>).</li>
+</ul></li>
+</ul>
+<p>Los nombres de lo métodos, al igual que los de las variables, van siempre en minúsculas. https://peps.python.org/pep-0008/#function-and-variable-names</p>
+<aside class="notes">
+<p>Son funciones asociadas a los objetos de una clase que sirven para implementar las acciones que dichos objetos pueden llevar a cabo. Se definen dentro del bloque de la clase y llevan un primer parámetro obligatorio que, por convenio, suele denominarse self y que hace referencia al objeto que realiza la acción.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 data-number="2.12.1" id="métodos-de-instancia"><span class="header-section-number">2.12.1</span> Métodos de instancia</h3>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb70-2"><a href="#cb70-2"></a></span>
+<span id="cb70-3"><a href="#cb70-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad, universidad <span class="op">=</span> <span class="st">"Universidad de Oviedo"</span>):</span>
+<span id="cb70-4"><a href="#cb70-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb70-5"><a href="#cb70-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb70-6"><a href="#cb70-6"></a>        <span class="va">self</span>.<span class="bu">dir</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb70-7"><a href="#cb70-7"></a>        <span class="va">self</span>.universidad <span class="op">=</span> universidad</span>
+<span id="cb70-8"><a href="#cb70-8"></a></span>
+<span id="cb70-9"><a href="#cb70-9"></a>    <span class="kw">def</span> presentarse(<span class="va">self</span>):</span>
+<span id="cb70-10"><a href="#cb70-10"></a>        <span class="cf">return</span> <span class="ss">f"Me llamo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss"> y tengo </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>edad<span class="sc">}</span><span class="ss"> años."</span></span>
+<span id="cb70-11"><a href="#cb70-11"></a></span>
+<span id="cb70-12"><a href="#cb70-12"></a>    <span class="kw">def</span> saludo(<span class="va">self</span>, tipo <span class="op">=</span> <span class="st">"informal"</span>):</span>
+<span id="cb70-13"><a href="#cb70-13"></a>        <span class="cf">if</span> tipo <span class="op">==</span> <span class="st">"formal"</span>:</span>
+<span id="cb70-14"><a href="#cb70-14"></a>            <span class="bu">print</span>(<span class="st">"Hola, ¿qué tal?"</span>)</span>
+<span id="cb70-15"><a href="#cb70-15"></a>        <span class="cf">elif</span> tipo <span class="op">==</span> <span class="st">"informal"</span>:</span>
+<span id="cb70-16"><a href="#cb70-16"></a>            <span class="bu">print</span>(<span class="st">"Eyy qué onda"</span>)</span>
+<span id="cb70-17"><a href="#cb70-17"></a>        <span class="cf">else</span>: <span class="co"># estándar</span></span>
+<span id="cb70-18"><a href="#cb70-18"></a>            <span class="bu">print</span>(<span class="st">"Hola"</span>)</span>
+<span id="cb70-19"><a href="#cb70-19"></a></span>
+<span id="cb70-20"><a href="#cb70-20"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb70-21"><a href="#cb70-21"></a><span class="bu">print</span>(persona1.presentarse())</span>
+<span id="cb70-22"><a href="#cb70-22"></a>persona1.saludo()</span>
+<span id="cb70-23"><a href="#cb70-23"></a>persona1.saludo(<span class="st">"formal"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Me llamo Ana y tengo 20 años.
+Eyy qué onda
+Hola, ¿qué tal?</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 data-number="2.12.2" id="métodos-estáticos"><span class="header-section-number">2.12.2</span> Métodos estáticos</h3>
+<p>Todos los métodos estáticos <strong>se invocan sobre la propia clase</strong>.</p>
+<p>Al no actuar sobre un objeto, no hay que colocares la referencia <code>self</code> como parámetro.</p>
+<div class="cell columns column-output-location" data-execution_count="42">
+<div class="column">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1"></a><span class="kw">class</span> Conversor:</span>
+<span id="cb72-2"><a href="#cb72-2"></a>    <span class="at">@staticmethod</span></span>
+<span id="cb72-3"><a href="#cb72-3"></a>    <span class="kw">def</span> km_a_millas(kilometros):</span>
+<span id="cb72-4"><a href="#cb72-4"></a>        <span class="co">"""Convierte kilómetros a millas"""</span></span>
+<span id="cb72-5"><a href="#cb72-5"></a>        <span class="cf">return</span> kilometros <span class="op">*</span> <span class="fl">0.621371</span></span>
+<span id="cb72-6"><a href="#cb72-6"></a></span>
+<span id="cb72-7"><a href="#cb72-7"></a>    <span class="at">@staticmethod</span></span>
+<span id="cb72-8"><a href="#cb72-8"></a>    <span class="kw">def</span> millas_a_km(millas):</span>
+<span id="cb72-9"><a href="#cb72-9"></a>        <span class="co">"""Convierte millas a kilómetros"""</span></span>
+<span id="cb72-10"><a href="#cb72-10"></a>        <span class="cf">return</span> millas <span class="op">/</span> <span class="fl">0.621371</span></span>
+<span id="cb72-11"><a href="#cb72-11"></a></span>
+<span id="cb72-12"><a href="#cb72-12"></a>    <span class="at">@staticmethod</span></span>
+<span id="cb72-13"><a href="#cb72-13"></a>    <span class="kw">def</span> libras_a_kg(libras):</span>
+<span id="cb72-14"><a href="#cb72-14"></a>        <span class="co">"""Convierte libras a kilogramos"""</span></span>
+<span id="cb72-15"><a href="#cb72-15"></a>        <span class="cf">return</span> libras <span class="op">*</span> <span class="fl">0.453592</span></span>
+<span id="cb72-16"><a href="#cb72-16"></a></span>
+<span id="cb72-17"><a href="#cb72-17"></a>    <span class="at">@staticmethod</span></span>
+<span id="cb72-18"><a href="#cb72-18"></a>    <span class="kw">def</span> kg_a_libras(kg):</span>
+<span id="cb72-19"><a href="#cb72-19"></a>        <span class="co">"""Convierte kilogramos a libras"""</span></span>
+<span id="cb72-20"><a href="#cb72-20"></a>        <span class="cf">return</span> kg <span class="op">/</span> <span class="fl">0.453592</span></span>
+<span id="cb72-21"><a href="#cb72-21"></a></span>
+<span id="cb72-22"><a href="#cb72-22"></a><span class="co"># Uso de los métodos estáticos</span></span>
+<span id="cb72-23"><a href="#cb72-23"></a><span class="bu">print</span>(Conversor.km_a_millas(<span class="dv">10</span>))   <span class="co"># Ejemplo: 6.21371 millas</span></span>
+<span id="cb72-24"><a href="#cb72-24"></a><span class="bu">print</span>(Conversor.millas_a_km(<span class="dv">5</span>))    <span class="co"># Ejemplo: 8.0467 kilómetros</span></span>
+<span id="cb72-25"><a href="#cb72-25"></a><span class="bu">print</span>(Conversor.libras_a_kg(<span class="dv">150</span>))  <span class="co"># Ejemplo: 68.0388 kilogramos</span></span>
+<span id="cb72-26"><a href="#cb72-26"></a><span class="bu">print</span>(Conversor.kg_a_libras(<span class="dv">70</span>))   <span class="co"># Ejemplo: 154.323 libras</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>6.21371
+8.046722489462816
+68.0388
+154.32370941286442</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 data-number="2.12.3" id="se-pueden-mezcla-métodos-de-distintos-tipos-en-la-misma-clase"><span class="header-section-number">2.12.3</span> Se pueden mezcla métodos de distintos tipos en la misma clase</h3>
+<div class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1"></a><span class="kw">class</span> Termometro:</span>
+<span id="cb74-2"><a href="#cb74-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, temperatura, unidad<span class="op">=</span><span class="st">"Celsius"</span>, marca<span class="op">=</span><span class="st">"Genérica"</span>, rango_medicion<span class="op">=</span>(<span class="op">-</span><span class="dv">50</span>, <span class="dv">150</span>), precision<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb74-3"><a href="#cb74-3"></a>        <span class="va">self</span>.temperatura <span class="op">=</span> temperatura</span>
+<span id="cb74-4"><a href="#cb74-4"></a>        <span class="va">self</span>.unidad <span class="op">=</span> unidad</span>
+<span id="cb74-5"><a href="#cb74-5"></a>        <span class="va">self</span>.marca <span class="op">=</span> marca</span>
+<span id="cb74-6"><a href="#cb74-6"></a>        <span class="va">self</span>.rango_medicion <span class="op">=</span> rango_medicion</span>
+<span id="cb74-7"><a href="#cb74-7"></a>        <span class="va">self</span>.precision <span class="op">=</span> precision</span>
+<span id="cb74-8"><a href="#cb74-8"></a>    </span>
+<span id="cb74-9"><a href="#cb74-9"></a>    <span class="co"># Método de instancia: Convierte la temperatura almacenada en la instancia a Fahrenheit (si es Celsius)</span></span>
+<span id="cb74-10"><a href="#cb74-10"></a>    <span class="kw">def</span> a_fahrenheit(<span class="va">self</span>):</span>
+<span id="cb74-11"><a href="#cb74-11"></a>        <span class="cf">if</span> <span class="va">self</span>.unidad <span class="op">==</span> <span class="st">"Celsius"</span>:</span>
+<span id="cb74-12"><a href="#cb74-12"></a>            <span class="cf">return</span> <span class="bu">round</span>((<span class="va">self</span>.temperatura <span class="op">*</span> <span class="dv">9</span><span class="op">/</span><span class="dv">5</span>) <span class="op">+</span> <span class="dv">32</span>, <span class="va">self</span>.precision)</span>
+<span id="cb74-13"><a href="#cb74-13"></a>        <span class="cf">return</span> <span class="va">self</span>.temperatura  <span class="co"># Si ya está en Fahrenheit, no hace conversión</span></span>
+<span id="cb74-14"><a href="#cb74-14"></a></span>
+<span id="cb74-15"><a href="#cb74-15"></a>    <span class="co"># Método de instancia: Convierte la temperatura almacenada en la instancia a Celsius (si es Fahrenheit)</span></span>
+<span id="cb74-16"><a href="#cb74-16"></a>    <span class="kw">def</span> a_celsius(<span class="va">self</span>):</span>
+<span id="cb74-17"><a href="#cb74-17"></a>        <span class="cf">if</span> <span class="va">self</span>.unidad <span class="op">==</span> <span class="st">"Fahrenheit"</span>:</span>
+<span id="cb74-18"><a href="#cb74-18"></a>            <span class="cf">return</span> <span class="bu">round</span>((<span class="va">self</span>.temperatura <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> <span class="dv">5</span><span class="op">/</span><span class="dv">9</span>, <span class="va">self</span>.precision)</span>
+<span id="cb74-19"><a href="#cb74-19"></a>        <span class="cf">return</span> <span class="va">self</span>.temperatura  <span class="co"># Si ya está en Celsius, no hace conversión</span></span>
+<span id="cb74-20"><a href="#cb74-20"></a></span>
+<span id="cb74-21"><a href="#cb74-21"></a>    <span class="co"># Método de instancia: Verifica si la temperatura está dentro del rango que soporta el termómetro</span></span>
+<span id="cb74-22"><a href="#cb74-22"></a>    <span class="kw">def</span> dentro_rango(<span class="va">self</span>):</span>
+<span id="cb74-23"><a href="#cb74-23"></a>        <span class="cf">return</span> <span class="va">self</span>.rango_medicion[<span class="dv">0</span>] <span class="op">&lt;=</span> <span class="va">self</span>.temperatura <span class="op">&lt;=</span> <span class="va">self</span>.rango_medicion[<span class="dv">1</span>]</span>
+<span id="cb74-24"><a href="#cb74-24"></a></span>
+<span id="cb74-25"><a href="#cb74-25"></a>    <span class="co"># Método estático: Convierte cualquier valor de Fahrenheit a Celsius sin depender de una instancia</span></span>
+<span id="cb74-26"><a href="#cb74-26"></a>    <span class="at">@staticmethod</span></span>
+<span id="cb74-27"><a href="#cb74-27"></a>    <span class="kw">def</span> fahrenheit_a_celsius(grados_fahrenheit):</span>
+<span id="cb74-28"><a href="#cb74-28"></a>        <span class="cf">return</span> (grados_fahrenheit <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> <span class="dv">5</span><span class="op">/</span><span class="dv">9</span></span>
+<span id="cb74-29"><a href="#cb74-29"></a></span>
+<span id="cb74-30"><a href="#cb74-30"></a>    <span class="co"># Método estático: Convierte cualquier valor de Celsius a Fahrenheit sin depender de una instancia</span></span>
+<span id="cb74-31"><a href="#cb74-31"></a>    <span class="at">@staticmethod</span></span>
+<span id="cb74-32"><a href="#cb74-32"></a>    <span class="kw">def</span> celsius_a_fahrenheit(grados_celsius):</span>
+<span id="cb74-33"><a href="#cb74-33"></a>        <span class="cf">return</span> (grados_celsius <span class="op">*</span> <span class="dv">9</span><span class="op">/</span><span class="dv">5</span>) <span class="op">+</span> <span class="dv">32</span></span>
+<span id="cb74-34"><a href="#cb74-34"></a></span>
+<span id="cb74-35"><a href="#cb74-35"></a><span class="co"># Uso de métodos de instancia</span></span>
+<span id="cb74-36"><a href="#cb74-36"></a>termometro <span class="op">=</span> Termometro(<span class="dv">25</span>, <span class="st">"Celsius"</span>, <span class="st">"TermoX"</span>, (<span class="op">-</span><span class="dv">50</span>, <span class="dv">150</span>), <span class="dv">2</span>)  <span class="co"># Instancia con temperatura en Celsius</span></span>
+<span id="cb74-37"><a href="#cb74-37"></a><span class="bu">print</span>(<span class="ss">f"Marca: </span><span class="sc">{</span>termometro<span class="sc">.</span>marca<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb74-38"><a href="#cb74-38"></a><span class="bu">print</span>(<span class="ss">f"Temperatura en Fahrenheit: </span><span class="sc">{</span>termometro<span class="sc">.</span>a_fahrenheit()<span class="sc">}</span><span class="ss">°F"</span>)  <span class="co"># 25°C -&gt; 77.00°F</span></span>
+<span id="cb74-39"><a href="#cb74-39"></a><span class="bu">print</span>(<span class="ss">f"¿Está dentro del rango?: </span><span class="sc">{</span>termometro<span class="sc">.</span>dentro_rango()<span class="sc">}</span><span class="ss">"</span>)  <span class="co"># True, 25°C está dentro del rango</span></span>
+<span id="cb74-40"><a href="#cb74-40"></a></span>
+<span id="cb74-41"><a href="#cb74-41"></a>termometro_f <span class="op">=</span> Termometro(<span class="dv">77</span>, <span class="st">"Fahrenheit"</span>, <span class="st">"TermoPro"</span>, (<span class="op">-</span><span class="dv">50</span>, <span class="dv">150</span>), <span class="dv">1</span>)  <span class="co"># Instancia en Fahrenheit</span></span>
+<span id="cb74-42"><a href="#cb74-42"></a><span class="bu">print</span>(<span class="ss">f"Temperatura en Celsius: </span><span class="sc">{</span>termometro_f<span class="sc">.</span>a_celsius()<span class="sc">}</span><span class="ss">°C"</span>)  <span class="co"># 77°F -&gt; 25.0°C</span></span>
+<span id="cb74-43"><a href="#cb74-43"></a></span>
+<span id="cb74-44"><a href="#cb74-44"></a><span class="co"># Uso de métodos estáticos sin necesidad de instanciar</span></span>
+<span id="cb74-45"><a href="#cb74-45"></a><span class="bu">print</span>(Termometro.fahrenheit_a_celsius(<span class="dv">100</span>))  <span class="co"># 100°F -&gt; 37.78°C</span></span>
+<span id="cb74-46"><a href="#cb74-46"></a><span class="bu">print</span>(Termometro.celsius_a_fahrenheit(<span class="dv">0</span>))    <span class="co"># 0°C -&gt; 32.0°F</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Marca: TermoX
+Temperatura en Fahrenheit: 77.0°F
+¿Está dentro del rango?: True
+Temperatura en Celsius: 25.0°C
+37.77777777777778
+32.0</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 data-number="2.12.4" id="métodos-de-clase"><span class="header-section-number">2.12.4</span> Métodos de clase</h3>
+<p>Supongamos que tenemos una clase <code>Empleado</code>, y queremos poder crear instancias de esta clase usando diferentes formatos de entrada, por ejemplo, a partir de una cadena de texto con información sobre el empleado.</p>
+<div class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1"></a><span class="kw">class</span> Empleado:</span>
+<span id="cb76-2"><a href="#cb76-2"></a></span>
+<span id="cb76-3"><a href="#cb76-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, apellido, sueldo):</span>
+<span id="cb76-4"><a href="#cb76-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb76-5"><a href="#cb76-5"></a>        <span class="va">self</span>.apellido <span class="op">=</span> apellido</span>
+<span id="cb76-6"><a href="#cb76-6"></a>        <span class="va">self</span>.sueldo <span class="op">=</span> sueldo</span>
+<span id="cb76-7"><a href="#cb76-7"></a></span>
+<span id="cb76-8"><a href="#cb76-8"></a>    <span class="co"># Método de instancia: Muestra la información del empleado</span></span>
+<span id="cb76-9"><a href="#cb76-9"></a>    <span class="kw">def</span> mostrar_info(<span class="va">self</span>):</span>
+<span id="cb76-10"><a href="#cb76-10"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>nombre<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>apellido<span class="sc">}</span><span class="ss"> - Sueldo: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>sueldo<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb76-11"><a href="#cb76-11"></a></span>
+<span id="cb76-12"><a href="#cb76-12"></a>    <span class="co"># Classmethod: Crea un empleado desde una cadena de texto con nombre, apellido y sueldo</span></span>
+<span id="cb76-13"><a href="#cb76-13"></a>    <span class="at">@classmethod</span></span>
+<span id="cb76-14"><a href="#cb76-14"></a>    <span class="kw">def</span> desde_string(cls, string_empleado):</span>
+<span id="cb76-15"><a href="#cb76-15"></a>        nombre, apellido, sueldo <span class="op">=</span> string_empleado.split(<span class="st">"-"</span>)</span>
+<span id="cb76-16"><a href="#cb76-16"></a>        <span class="cf">return</span> cls(nombre, apellido, <span class="bu">float</span>(sueldo))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell columns column-output-location" data-execution_count="45">
+<div class="column">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1"></a><span class="co"># Uso de classmethod para crear instancias</span></span>
+<span id="cb77-2"><a href="#cb77-2"></a>empleado1 <span class="op">=</span> Empleado.desde_string(<span class="st">"Ana-Garcia-50000"</span>)</span>
+<span id="cb77-3"><a href="#cb77-3"></a>empleado2 <span class="op">=</span> Empleado.desde_string(<span class="st">"Luis-Perez-60000"</span>)</span>
+<span id="cb77-4"><a href="#cb77-4"></a></span>
+<span id="cb77-5"><a href="#cb77-5"></a><span class="co"># Muestra la información de los empleados creados</span></span>
+<span id="cb77-6"><a href="#cb77-6"></a><span class="bu">print</span>(empleado1.mostrar_info())  </span>
+<span id="cb77-7"><a href="#cb77-7"></a><span class="bu">print</span>(empleado2.mostrar_info())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>Ana Garcia - Sueldo: 50000.0
+Luis Perez - Sueldo: 60000.0</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=class%20Empleado%3A%0A%0A%20%20%20%20def%20__init__%28self,%20nombre,%20apellido,%20sueldo%29%3A%0A%20%20%20%20%20%20%20%20self.nombre%20%3D%20nombre%0A%20%20%20%20%20%20%20%20self.apellido%20%3D%20apellido%0A%20%20%20%20%20%20%20%20self.sueldo%20%3D%20sueldo%0A%0A%20%20%20%20%23%20M%C3%A9todo%20de%20instancia%3A%20Muestra%20la%20informaci%C3%B3n%20del%20empleado%0A%20%20%20%20def%20mostrar_info%28self%29%3A%0A%20%20%20%20%20%20%20%20return%20f%22%7Bself.nombre%7D%20%7Bself.apellido%7D%20-%20Sueldo%3A%20%7Bself.sueldo%7D%22%0A%0A%20%20%20%20%23%20Classmethod%3A%20Crea%20un%20empleado%20desde%20una%20cadena%20de%20texto%20con%20nombre,%20apellido%20y%20sueldo%0A%20%20%20%20%40classmethod%0A%20%20%20%20def%20desde_string%28cls,%20string_empleado%29%3A%0A%20%20%20%20%20%20%20%20nombre,%20apellido,%20sueldo%20%3D%20string_empleado.split%28%22-%22%29%0A%20%20%20%20%20%20%20%20return%20cls%28nombre,%20apellido,%20float%28sueldo%29%29%0A%20%20%20%20%20%20%20%20%0A%23%20Uso%20de%20classmethod%20para%20crear%20instancias%0Aempleado1%20%3D%20Empleado.desde_string%28%22Ana-Garcia-50000%22%29%0Aempleado2%20%3D%20Empleado.desde_string%28%22Luis-Perez-60000%22%29%0A%0A%23%20Muestra%20la%20informaci%C3%B3n%20de%20los%20empleados%20creados%0Aprint%28empleado1.mostrar_info%28%29%29%20%20%0Aprint%28empleado2.mostrar_info%28%29%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+</section>
+<section id="propiedades" class="slide level2" data-number="2.13">
+<h2><span class="header-section-number">2.13</span> Propiedades</h2>
+<p>El decorador <code>@property</code> permite que un método sin parámetros (es decir, solo con <code>self</code>) pueda ser accedido como un atributo, omitiendo así el uso de paréntesis vacíos.</p>
+<div class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb79-2"><a href="#cb79-2"></a></span>
+<span id="cb79-3"><a href="#cb79-3"></a><span class="kw">class</span> Persona:</span>
+<span id="cb79-4"><a href="#cb79-4"></a></span>
+<span id="cb79-5"><a href="#cb79-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb79-6"><a href="#cb79-6"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb79-7"><a href="#cb79-7"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb79-8"><a href="#cb79-8"></a></span>
+<span id="cb79-9"><a href="#cb79-9"></a>    <span class="kw">def</span> nacimiento(<span class="va">self</span>):</span>
+<span id="cb79-10"><a href="#cb79-10"></a>        <span class="co"># Obtener el año actual</span></span>
+<span id="cb79-11"><a href="#cb79-11"></a>        year_actual <span class="op">=</span> datetime.now().year</span>
+<span id="cb79-12"><a href="#cb79-12"></a>        <span class="co"># Calcular el año de nacimiento</span></span>
+<span id="cb79-13"><a href="#cb79-13"></a>        <span class="cf">return</span> year_actual <span class="op">-</span> <span class="va">self</span>.edad</span>
+<span id="cb79-14"><a href="#cb79-14"></a></span>
+<span id="cb79-15"><a href="#cb79-15"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb79-16"><a href="#cb79-16"></a><span class="bu">print</span>(persona1.edad)</span>
+<span id="cb79-17"><a href="#cb79-17"></a><span class="bu">print</span>(persona1.nacimiento())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>20
+2004</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb81-2"><a href="#cb81-2"></a></span>
+<span id="cb81-3"><a href="#cb81-3"></a><span class="kw">class</span> Persona:</span>
+<span id="cb81-4"><a href="#cb81-4"></a></span>
+<span id="cb81-5"><a href="#cb81-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb81-6"><a href="#cb81-6"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb81-7"><a href="#cb81-7"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb81-8"><a href="#cb81-8"></a></span>
+<span id="cb81-9"><a href="#cb81-9"></a>    <span class="at">@property</span></span>
+<span id="cb81-10"><a href="#cb81-10"></a>    <span class="kw">def</span> nacimiento(<span class="va">self</span>):</span>
+<span id="cb81-11"><a href="#cb81-11"></a>        <span class="co"># Obtener el año actual</span></span>
+<span id="cb81-12"><a href="#cb81-12"></a>        year_actual <span class="op">=</span> datetime.now().year</span>
+<span id="cb81-13"><a href="#cb81-13"></a>        <span class="co"># Calcular el año de nacimiento</span></span>
+<span id="cb81-14"><a href="#cb81-14"></a>        <span class="cf">return</span> year_actual <span class="op">-</span> <span class="va">self</span>.edad</span>
+<span id="cb81-15"><a href="#cb81-15"></a></span>
+<span id="cb81-16"><a href="#cb81-16"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb81-17"><a href="#cb81-17"></a><span class="bu">print</span>(persona1.edad)</span>
+<span id="cb81-18"><a href="#cb81-18"></a><span class="bu">print</span>(persona1.nacimiento)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>20
+2004</code></pre>
+</div>
+</div>
+<p>¿Por qué querríamos hacer esto?</p>
+</section>
+<section id="modificación-de-atributos-mediante-propiedades" class="slide level2" data-number="2.14">
+<h2><span class="header-section-number">2.14</span> Modificación de atributos mediante propiedades</h2>
+<p>¿Cómo modificamos los atributos de un objeto?</p>
+<div class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb83-2"><a href="#cb83-2"></a></span>
+<span id="cb83-3"><a href="#cb83-3"></a><span class="kw">class</span> Persona:</span>
+<span id="cb83-4"><a href="#cb83-4"></a></span>
+<span id="cb83-5"><a href="#cb83-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb83-6"><a href="#cb83-6"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb83-7"><a href="#cb83-7"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb83-8"><a href="#cb83-8"></a></span>
+<span id="cb83-9"><a href="#cb83-9"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb83-10"><a href="#cb83-10"></a><span class="bu">print</span>(<span class="ss">f"La edad de </span><span class="sc">{</span>persona1<span class="sc">.</span>nombre<span class="sc">}</span><span class="ss"> es </span><span class="sc">{</span>persona1<span class="sc">.</span>edad<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb83-11"><a href="#cb83-11"></a>persona1.edad <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb83-12"><a href="#cb83-12"></a><span class="bu">print</span>(<span class="ss">f"La edad de </span><span class="sc">{</span>persona1<span class="sc">.</span>nombre<span class="sc">}</span><span class="ss"> es </span><span class="sc">{</span>persona1<span class="sc">.</span>edad<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La edad de Ana es 20
+La edad de Ana es 21</code></pre>
+</div>
+</div>
+</section>
+<section id="sin-embargo-las-propiedades" class="slide level2" data-number="2.15">
+<h2><span class="header-section-number">2.15</span> Sin embargo las propiedades…</h2>
+<div class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb85-2"><a href="#cb85-2"></a></span>
+<span id="cb85-3"><a href="#cb85-3"></a><span class="kw">class</span> Persona:</span>
+<span id="cb85-4"><a href="#cb85-4"></a></span>
+<span id="cb85-5"><a href="#cb85-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad):</span>
+<span id="cb85-6"><a href="#cb85-6"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb85-7"><a href="#cb85-7"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb85-8"><a href="#cb85-8"></a></span>
+<span id="cb85-9"><a href="#cb85-9"></a>    <span class="at">@property</span></span>
+<span id="cb85-10"><a href="#cb85-10"></a>    <span class="kw">def</span> nacimiento(<span class="va">self</span>):</span>
+<span id="cb85-11"><a href="#cb85-11"></a>        <span class="co"># Obtener el año actual</span></span>
+<span id="cb85-12"><a href="#cb85-12"></a>        year_actual <span class="op">=</span> datetime.now().year</span>
+<span id="cb85-13"><a href="#cb85-13"></a>        <span class="co"># Calcular el año de nacimiento</span></span>
+<span id="cb85-14"><a href="#cb85-14"></a>        <span class="cf">return</span> year_actual <span class="op">-</span> <span class="va">self</span>.edad</span>
+<span id="cb85-15"><a href="#cb85-15"></a></span>
+<span id="cb85-16"><a href="#cb85-16"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb85-17"><a href="#cb85-17"></a><span class="bu">print</span>(persona1.edad)</span>
+<span id="cb85-18"><a href="#cb85-18"></a><span class="bu">print</span>(persona1.nacimiento)</span>
+<span id="cb85-19"><a href="#cb85-19"></a>persona1.nacimiento <span class="op">=</span> <span class="dv">2000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>20
+2004</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>AttributeError: property 'nacimiento' of 'Persona' object has no setter</code></pre>
+</div>
+</div>
+<p>Diferencia entre propiedad y atributo:</p>
+<ul>
+<li>Las propiedades solo me sirven como lectura, no puedo modificarlas.</li>
+<li>Puedo modificar los atributos.</li>
+</ul>
+</section>
+<section id="verdad-a-medias" class="slide level2" data-number="2.16">
+<h2><span class="header-section-number">2.16</span> Verdad a medias</h2>
+<p>Sí que hay una forma de hacer que una propiedad se modifique. Con el método <code>setter</code> usando la sintaxis <code>@nombre_de_la_propiedad.setter()</code> y definiendo la lógica de la modificación para que sea coherente.</p>
+<div class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1"></a><span class="im">import</span> math</span>
+<span id="cb88-2"><a href="#cb88-2"></a></span>
+<span id="cb88-3"><a href="#cb88-3"></a><span class="kw">class</span> Cuadrado:</span>
+<span id="cb88-4"><a href="#cb88-4"></a></span>
+<span id="cb88-5"><a href="#cb88-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, lado):</span>
+<span id="cb88-6"><a href="#cb88-6"></a>        <span class="va">self</span>.lado <span class="op">=</span> lado</span>
+<span id="cb88-7"><a href="#cb88-7"></a>    </span>
+<span id="cb88-8"><a href="#cb88-8"></a>    <span class="at">@property</span></span>
+<span id="cb88-9"><a href="#cb88-9"></a>    <span class="kw">def</span> perimetro(<span class="va">self</span>):</span>
+<span id="cb88-10"><a href="#cb88-10"></a>        <span class="cf">return</span> lado<span class="op">*</span><span class="dv">4</span></span>
+<span id="cb88-11"><a href="#cb88-11"></a></span>
+<span id="cb88-12"><a href="#cb88-12"></a>    <span class="at">@perimetro.setter</span></span>
+<span id="cb88-13"><a href="#cb88-13"></a>    <span class="kw">def</span> perimetro(<span class="va">self</span>, nuevo_perimetro):</span>
+<span id="cb88-14"><a href="#cb88-14"></a>        <span class="va">self</span>.lado <span class="op">=</span> nuevo_perimetro<span class="op">/</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Las modificaciones no tienen por qué afectar a todos los atributos.</p>
+<div class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1"></a><span class="im">import</span> math</span>
+<span id="cb89-2"><a href="#cb89-2"></a></span>
+<span id="cb89-3"><a href="#cb89-3"></a><span class="kw">class</span> Cuadrado:</span>
+<span id="cb89-4"><a href="#cb89-4"></a></span>
+<span id="cb89-5"><a href="#cb89-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, lado, color):</span>
+<span id="cb89-6"><a href="#cb89-6"></a>        <span class="va">self</span>.lado <span class="op">=</span> lado</span>
+<span id="cb89-7"><a href="#cb89-7"></a>        <span class="va">self</span>.color <span class="op">=</span> <span class="va">self</span>.color</span>
+<span id="cb89-8"><a href="#cb89-8"></a>    </span>
+<span id="cb89-9"><a href="#cb89-9"></a>    <span class="at">@property</span></span>
+<span id="cb89-10"><a href="#cb89-10"></a>    <span class="kw">def</span> perimetro(<span class="va">self</span>):</span>
+<span id="cb89-11"><a href="#cb89-11"></a>        <span class="cf">return</span> lado<span class="op">*</span><span class="dv">4</span></span>
+<span id="cb89-12"><a href="#cb89-12"></a></span>
+<span id="cb89-13"><a href="#cb89-13"></a>    <span class="at">@perimetro.setter</span></span>
+<span id="cb89-14"><a href="#cb89-14"></a>    <span class="kw">def</span> perimetro(<span class="va">self</span>, nuevo_perimetro):</span>
+<span id="cb89-15"><a href="#cb89-15"></a>        <span class="va">self</span>.lado <span class="op">=</span> nuevo_perimetro<span class="op">/</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="encapsulación" class="slide level2" data-number="2.17">
+<h2><span class="header-section-number">2.17</span> Encapsulación</h2>
+<ul>
+<li>Una de las ventajas de la programación orientada a objetos es la <strong>encapsulación</strong> de información.</li>
+<li>La encapsulación <strong>oculta los detalles</strong> de implementación y el estado de cada objeto.</li>
+<li>Quien utilice la clase solo necesita <strong>conocer la interfaz</strong> que se muestra hacia el exterior.</li>
+<li>La encapsulación en programación es fundamental para construir <strong>aplicaciones complejas</strong>.</li>
+</ul>
+</section>
+<section id="niveles-de-acceso" class="slide level2" data-number="2.18">
+<h2><span class="header-section-number">2.18</span> Niveles de acceso</h2>
+<p>Para preservar la encapsulación, muchos lenguajes de programación establecen límites de acceso a sus atributos</p>
+<ul>
+<li><strong>Privado</strong> (__): Sólo se puede acceder al elemento desde dentro de la propia clase.</li>
+<li><strong>Protegido</strong> (_): Sólo se puede acceder al elemento desde la clase o subclases de ésta.</li>
+<li><strong>Público</strong>: El acceso se permite desde cualquier parte del código, dentro o fuera de la clase.</li>
+</ul>
+<p>Python no proporciona palabras reservadas para esto.</p>
+<aside class="notes">
+<p>Esto permite evitar que se manipulen los atributos de objetos desde el exterior, y sólo permiten su modificación de forma controlada, a través de métodos de la propia clase Python no proporciona palabras reservadas para esto, se utilizan triquiñuelas en la nomenclatura (<em>name manglig</em>).</p>
+<p>Python no 3ene ningún mecanismo para restringir el acceso a los elementos de una clase. Lo que hace es poner trabas sintác3cas para dificultar el acceso a ciertos elementos, aunque realmente siempre se puede acceder a todos los elementos, no hay nada completamente privado. Se u?liza el convenio siguiente para denotar el nivel de acceso de un elemento: ⊲ Cuando el iden?ficador del elemento comienza con doble subrayado el elemento es priva- do. Así, si queremos que el atributo atr no sea accesible (al menos, fácilmente), debemos renombrarlo como atr. __ ⊲ Cuando el iden?ficador del elemento comienza con un subrayado simple se considera que es protegido como, por ejemplo, _ atr. ⊲ En cualquier otro caso el elemento se consider público.</p>
+<p>¿Por qué puede ser esto interesante? Tenemos un atributo edad en la clase Persona y no queremos que la edad salga de un rango</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="imprimir-objeto-instanciado" class="slide level2" data-number="2.19">
+<h2><span class="header-section-number">2.19</span> Imprimir objeto instanciado</h2>
+<p>Hay que redefinir <code>__str__()</code> que es un <strong>método mágico</strong>.</p>
+<div class="cell" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1"></a><span class="kw">class</span> Persona:</span>
+<span id="cb90-2"><a href="#cb90-2"></a></span>
+<span id="cb90-3"><a href="#cb90-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, nombre, edad, universidad <span class="op">=</span> <span class="st">"Universidad de Oviedo"</span>):</span>
+<span id="cb90-4"><a href="#cb90-4"></a>        <span class="va">self</span>.nombre <span class="op">=</span> nombre</span>
+<span id="cb90-5"><a href="#cb90-5"></a>        <span class="va">self</span>.edad <span class="op">=</span> edad</span>
+<span id="cb90-6"><a href="#cb90-6"></a>        <span class="va">self</span>.<span class="bu">dir</span> <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb90-7"><a href="#cb90-7"></a>        <span class="va">self</span>.universidad <span class="op">=</span> universidad</span>
+<span id="cb90-8"><a href="#cb90-8"></a></span>
+<span id="cb90-9"><a href="#cb90-9"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
+<span id="cb90-10"><a href="#cb90-10"></a>        <span class="cf">return</span>(<span class="ss">f'Esto es lo que se va a llamar al pasar eso a la función print'</span>)</span>
+<span id="cb90-11"><a href="#cb90-11"></a></span>
+<span id="cb90-12"><a href="#cb90-12"></a>persona1 <span class="op">=</span> Persona(<span class="st">"Ana"</span>, <span class="dv">20</span>)</span>
+<span id="cb90-13"><a href="#cb90-13"></a><span class="bu">print</span>(persona1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Esto es lo que se va a llamar al pasar eso a la función print</code></pre>
+</div>
+</div>
+
+<img src="themes_noelia/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>Programación Avanzada - © Noelia Rico</p>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="POO_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="POO_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="POO_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="POO_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="POO_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="POO_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="POO_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="POO_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="POO_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="POO_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+          let selectedAnnoteEl;
+          const selectorForAnnotation = ( cell, annotation) => {
+            let cellAttr = 'data-code-cell="' + cell + '"';
+            let lineAttr = 'data-code-annotation="' +  annotation + '"';
+            const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+            return selector;
+          }
+          const selectCodeLines = (annoteEl) => {
+            const doc = window.document;
+            const targetCell = annoteEl.getAttribute("data-target-cell");
+            const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+            const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+            const lineIds = lines.map((line) => {
+              return targetCell + "-" + line;
+            })
+            let top = null;
+            let height = null;
+            let parent = null;
+            if (lineIds.length > 0) {
+                //compute the position of the single el (top and bottom and make a div)
+                const el = window.document.getElementById(lineIds[0]);
+                top = el.offsetTop;
+                height = el.offsetHeight;
+                parent = el.parentElement.parentElement;
+              if (lineIds.length > 1) {
+                const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+                const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+                height = bottom - top;
+              }
+              if (top !== null && height !== null && parent !== null) {
+                // cook up a div (if necessary) and position it 
+                let div = window.document.getElementById("code-annotation-line-highlight");
+                if (div === null) {
+                  div = window.document.createElement("div");
+                  div.setAttribute("id", "code-annotation-line-highlight");
+                  div.style.position = 'absolute';
+                  parent.appendChild(div);
+                }
+                div.style.top = top - 2 + "px";
+                div.style.height = height + 4 + "px";
+                let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+                if (gutterDiv === null) {
+                  gutterDiv = window.document.createElement("div");
+                  gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                  gutterDiv.style.position = 'absolute';
+                  const codeCell = window.document.getElementById(targetCell);
+                  const gutter = codeCell.querySelector('.code-annotation-gutter');
+                  gutter.appendChild(gutterDiv);
+                }
+                gutterDiv.style.top = top - 2 + "px";
+                gutterDiv.style.height = height + 4 + "px";
+              }
+              selectedAnnoteEl = annoteEl;
+            }
+          };
+          const unselectCodeLines = () => {
+            const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+            elementsIds.forEach((elId) => {
+              const div = window.document.getElementById(elId);
+              if (div) {
+                div.remove();
+              }
+            });
+            selectedAnnoteEl = undefined;
+          };
+          // Handle positioning of the toggle
+          window.addEventListener(
+          "resize",
+          throttle(() => {
+            elRect = undefined;
+            if (selectedAnnoteEl) {
+              selectCodeLines(selectedAnnoteEl);
+            }
+          }, 10)
+          );
+          function throttle(fn, ms) {
+          let throttle = false;
+          let timer;
+            return (...args) => {
+              if(!throttle) { // first call gets through
+                  fn.apply(this, args);
+                  throttle = true;
+              } else { // all the others get throttled
+                  if(timer) clearTimeout(timer); // cancel #2
+                  timer = setTimeout(() => {
+                    fn.apply(this, args);
+                    timer = throttle = false;
+                  }, ms);
+              }
+            };
+          }
+          const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+          for (let i=0; i<annoteTargets.length; i++) {
+            const annoteTarget = annoteTargets[i];
+            const targetCell = annoteTarget.getAttribute("data-target-cell");
+            const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+            const contentFn = () => {
+              const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+              if (content) {
+                const tipContent = content.cloneNode(true);
+                tipContent.classList.add("code-annotation-tip-content");
+                return tipContent.outerHTML;
+              }
+            }
+            const config = {
+              allowHTML: true,
+              content: contentFn,
+              onShow: (instance) => {
+                selectCodeLines(instance.reference);
+                instance.reference.classList.add('code-annotation-active');
+                window.tippy.hideAll();
+              },
+              onHide: (instance) => {
+                unselectCodeLines();
+                instance.reference.classList.remove('code-annotation-active');
+              },
+              maxWidth: 300,
+              delay: [50, 0],
+              duration: [200, 0],
+              offset: [5, 10],
+              arrow: true,
+              appendTo: function(el) {
+                return el.parentElement.parentElement.parentElement;
+              },
+              interactive: true,
+              interactiveBorder: 10,
+              theme: 'light-border',
+              placement: 'right',
+              popperOptions: {
+                modifiers: [
+                {
+                  name: 'flip',
+                  options: {
+                    flipVariations: false, // true by default
+                    allowedAutoPlacements: ['right'],
+                    fallbackPlacements: ['right', 'top', 'top-start', 'top-end'],
+                  },
+                },
+                {
+                  name: 'preventOverflow',
+                  options: {
+                    mainAxis: false,
+                    altAxis: false
+                  }
+                }
+                ]        
+              }      
+            };
+            window.tippy(annoteTarget, config); 
+          }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
