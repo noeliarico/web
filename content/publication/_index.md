@@ -1,8 +1,8 @@
 ---
-header:
+banner:
   caption: ""
   image: ""
+cms_exclude: true
 title: Publications
-subtitle: "In journals, conference proceedings and lectures notes"
-view: 4
+view: citation
 ---

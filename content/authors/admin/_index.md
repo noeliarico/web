@@ -1,64 +1,42 @@
 ---
-bio: PhD in Artificial Intelligence at the University of Oviedo
-  matter.
 education:
-  courses:
-  - course: PhD in Artificial Intelligence
-    institution: University of Oviedo
-    year: 2022
-  - course: MSc in Research in Artificial Intelligence
-    institution: International University Menéndez Pelayo
-    year: 2018
-  - course: BEng in Software Engineering
-    institution: University of Oviedo
-    year: 2017
-email: "noeliarico@uniovi.es"
-highlight_name: false
+- area: PhD Artificial Intelligence
+- area: MSc Research Artificial Intelligence (Data Mining mention)
+- area: Bachelor in Software Engineering
+first_name: Noelia
+last_name: Rico
+highlight_name: true
 interests:
 - Computational social choice
-- Parallel computing on GPU
-- Clustering algorithms
 - Data visualization
-- Teaching R for social sciences
+- Machine learning applied to social sciences
+languages:
+- name: English
+  percent: 100
 
 organizations:
-- name: Department of Computer Science
-  url: https://www.uniovi.es/en/departamentos/di
-- name: University of Oviedo
-  url: https://www.uniovi.es
-role: PhD in Artificial Intelligence
-social:
-- display:
-    header: true
-  icon: twitter
-  icon_pack: fab
-  label: Follow me on Twitter
-  link: https://twitter.com/noeliarico_
-- icon: envelope
-  icon_pack: fas
-  link: /#contact
-- icon: github
-  icon_pack: fab
-  link: http://github.com/noeliarico/
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/noeliaricop/
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.es/citations?user=T4AbY4IAAAAJ
-- icon: orcid
-  icon_pack: ai
-  link: https://orcid.org/0000-0002-6169-4523
-- icon: researchgate
-  icon_pack: ai
-  link: https://www.researchgate.net/profile/Noelia-Rico
+- name: Dpto de Informática
+  url: https://www.di.uniovi.es
+- name: Universidad de Oviedo
+  url: https://www.uniovi.es/
+profiles:
+- icon: at-symbol
+  label: E-mail Me
+  url: mailto:noeliarico@uniovi.es
+- icon: brands/linkedin
+  url: https://www.linkedin.com/in/noeliaricop/
+- icon: brands/x
+  url: https://twitter.com/noeliarico_
+- icon: brands/github
+  url: https://github.com/noeliarico
+- icon: academicons/orcid
+  url: https://orcid.org/0000-0002-6169-4523
+- icon: academicons/google-scholar
+  url: https://scholar.google.es/citations?user=T4AbY4IAAAAJ
+- icon: academicons/researchgate
+  url: https://www.researchgate.net/profile/Noelia-Rico
+  
+role: AYD en el área de CCIA
 superuser: true
 title: Noelia Rico
-
 ---
-
-<!--Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.-->
-
-<!-- {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}. -->

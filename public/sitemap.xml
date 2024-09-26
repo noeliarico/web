@@ -2,241 +2,171 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://noeliarico.dev/courses/example/python/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/courses/example/visualization/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/courses/example/stats/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/talk/example-talk/</loc>
+    <loc>https://example.com/event/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/</loc>
+    <loc>https://example.com/event/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/event/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>https://example.com/projects/</loc>
+    <lastmod>2024-05-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/courses/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+    <loc>https://example.com/post/get-started/</loc>
+    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/courses/example/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/academic/</loc>
+    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication-type/1/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/post/</loc>
+    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication-type/2/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/tags/hugo-blox/</loc>
+    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication-type/6/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/tags/markdown/</loc>
+    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication/2021-belief/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/ana-alonso/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/tags/hugo/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/ana-g-rua/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/project/pandas/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/authors/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/project/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/camino-r.-vela/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/project/pytorch/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/elena-diaz/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/project/scikit/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication/2021-ijar/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/tags/second-brain/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/irene-diaz/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/tags/wowchemy/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/luigi-troiano/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/post/second-brain/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/noelia-rico/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/post/data-visualization/</loc>
+    <lastmod>2023-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication/2021-cbms/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/post/teach-courses/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication_types/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/experience/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication/</loc>
-    <lastmod>2021-10-17T11:09:34+02:00</lastmod>
+    <loc>https://example.com/tags/hugo-blox-builder/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/raul-perez-fernandez/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/tags/javascript/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication/2021-caepia/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/teaching/js/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication/2021-eusflat/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/teaching/python/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/tag/academic/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/python/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/categories/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+    <loc>https://example.com/teaching/</loc>
+    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/category/demo/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+    <loc>https://example.com/post/project-management/</loc>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/noelia-rico/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/post/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/tags/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/post/getting-started/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/tag/%E5%BC%80%E6%BA%90/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/category/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/post/2020-12-01-r-rmarkdown/</loc>
+    <loc>https://example.com/post/2020-12-01-r-rmarkdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/tag/plot/</loc>
+    <loc>https://example.com/tags/plot/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/category/r/</loc>
+    <loc>https://example.com/tags/r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/tag/r-markdown/</loc>
+    <loc>https://example.com/tags/regression/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/tag/regression/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+    <loc>https://example.com/publication/preprint/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/a-j-diaz-honrubia/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/publication_types/article/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/a-j-d%C4%B1az-honrubia/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/tags/large-language-models/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/b-remeseiro/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/publication_types/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/e-a-de-la-cal/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/publication/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/publication/2020-edulearn-finext/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/publication/journal-article/</loc>
+    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/g-cebrian-marquez/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/publication_types/article-journal/</loc>
+    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/j-r-villar/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/tags/source-themes/</loc>
+    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/laura-muniz-rodriguez/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/publication/conference-paper/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/luis-j-rodriguez-muniz/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
+    <loc>https://example.com/publication_types/paper-conference/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://noeliarico.dev/author/n-rico/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/publication/2020-hais-pisa/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/publication/2020-edulearn-gymkhana/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/author/p-suarez-otero/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/author/pedro-alonso/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/author/r-mencia/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/author/r-zurita/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/publication/2020-hais-borda/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/post/writing-technical-content/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/post/jupyter/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/slides/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/author/e-de-andres/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/author/e-de-la-cal/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/author/enrique-de-la-cal/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/publication/2019-edulearn-finext/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/publication/2019-fuzzieee/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/publication/2019-neurocomputing/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/author/jose-r-villar/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/publication/2019-edulearn-gymkhana/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/publication/2018-hais/</loc>
-    <lastmod>2021-09-21T14:46:48+02:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/tag/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/tag/demo/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/project/external-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/project/internal-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://noeliarico.dev/admin/</loc>
-  </url><url>
-    <loc>https://noeliarico.dev/slides/belief2021/</loc>
-  </url><url>
-    <loc>https://noeliarico.dev/resume/</loc>
+    <loc>https://example.com/docencia/</loc>
+    <changefreq>weekly</changefreq>
   </url>
 </urlset>

@@ -1,7 +1,8 @@
 ---
-header:
+cms_exclude: true
+image:
   caption: ""
-  image: ""
+  filename: ""
 title: Recent & Upcoming Talks
-view: 2
+view: card
 ---
